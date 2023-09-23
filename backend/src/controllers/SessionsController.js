@@ -1,10 +1,11 @@
 const { sign } = require("jsonwebtoken");
+const { jwt } = require("../configs/Auth");
 const { compare, hash } = require("bcryptjs");
 const AppError = require("../utils/AppError");
 const knex = require('../database/connection');
 
 class SessionsController {
-    
+
     //efetuar login
     async signln(request, response) {
 
@@ -18,7 +19,18 @@ class SessionsController {
 
         if (!checkIfPasswordAreSame) throw new AppError("Email e/ou senhas incorretos", 400);
 
-        response.status(200).json(user);
+        const { expiresIn, secret } = jwt;
+
+        
+        const token = sign({}, secret, {
+            subject: String(user.id),
+            expiresIn,
+        });
+
+        response.status(200).json({
+            user,
+            token,
+        });
     };
 
     //efetuar cadastro
