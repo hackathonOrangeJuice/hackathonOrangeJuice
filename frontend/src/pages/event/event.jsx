@@ -6,7 +6,7 @@ export function Event() {
     return (
         <Container>
             <header>
-                <img src='./seta-voltar.png'></img>
+                <img src='./seta-voltar.png' className='seta-voltar'></img>
                 <img src='./logo.png'></img>
             </header>
             <main>
@@ -24,13 +24,13 @@ export function Event() {
                 <div className='Buttons'>
                     <button><img src='coracao.png'></img></button>
                     <div className='Button-Check'>
-                        <input type='checkbox'></input>
+                        <input type='checkbox' className='check'></input>
                         <p>Marcar presença</p>
                     </div>    
                 </div>
                 <div className='Networks'>
                     <img src='linkedin.png'></img>
-                    <img src='insta.png'></img>
+                    <img src='insta.png' className='insta'></img>
                 </div>
             </footer>
         </Container>
