@@ -5,9 +5,7 @@ export function Home() {
 
   return (
     <Container>
-      <div  className='Wallpaper'>
-        <img src='./fundo.jpg'></img>
-      </div>
+      <div class="background-container"></div>
       <header>
         <div className='Logo-Menu'>
           <img src='./menu.png'></img>
@@ -19,7 +17,7 @@ export function Home() {
         </div>
       </header>
       <main>
-        <h1>Oranje Juice</h1>
+        <h1>Orange Juice</h1>
         <h1><span>Hackathon</span></h1>
         <p>Esse é um projeto desenvolvido em react e node.js para organizar eventos 
           em calendário e marcar presença nos principais e diversos eventos do ano!</p>

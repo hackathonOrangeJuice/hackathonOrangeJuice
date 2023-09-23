@@ -14,9 +14,13 @@ export default createGlobalStyle`
 
     body {
         font-family: "Raleway";
+        background-image: url('fundo.jpg'); 
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
         position: relative;
-        overflow-x: hidden;
-        overflow-y: hidden;
+        height: 100vh;
+        backdrop-filter: brightness(50%);
     }
 
 `;

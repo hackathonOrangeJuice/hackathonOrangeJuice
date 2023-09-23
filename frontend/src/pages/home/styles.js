@@ -2,19 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 
-    .Wallpaper {
-        position: absolute;
-        width: 95rem;
-        height: 55rem;
-        z-index: -1;
-    }
-
-    .Wallpaper img {
-        width: 100%;
-        height: 100%;
-        filter: brightness(0.7);
-    }
-
     header {
         padding: 2rem 10rem 0;
         display: flex;
@@ -70,7 +57,8 @@ export const Container = styled.div`
         text-transform: uppercase;
         color: white;
         letter-spacing: .1rem;
-        font-size: 3.2rem;
+        font-size: 3.8rem;
+        text-shadow: 0 0 1rem gray;
     }
 
     main span {
@@ -79,11 +67,11 @@ export const Container = styled.div`
 
     main p {
         margin-top: 1.5rem;
-        font-size: 1rem;
+        font-size: 1.3rem;
         color: white;
         font-weight: bold;
         text-transform: uppercase;
-        width: 23rem;
+        width: 29rem;
     }
 
     main button {
