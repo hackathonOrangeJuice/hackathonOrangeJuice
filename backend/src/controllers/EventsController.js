@@ -1,35 +1,88 @@
-const knex = require("knex");
+const knex = require("../database/connection");
+const AppError = require("../utils/AppError");
 
 class EventsController {
 
-    //pegando os eventos
+    //pegar os eventos
     async getAllEvents(request, response) {
 
-        const allEvents = knex("events");
+        const allEvents = await knex("events");
+
+        if (allEvents.length === 0) throw new AppError("Sem eventos disponiveis", 404)
 
         response.status(200).json(allEvents);
     };
 
-    //pegando evento por id
+    //pegar evento por id
     async getEventById(request, response) {
-        response.status(200).json({
-            message: "get event by id"
-        });
+
+        const { id } = request.params;
+
+        const event = await knex("events").where({ id }).first();
+
+        if (!event) throw new AppError("Evento não localizado", 404);
+
+        response.status(200).json(event)
     };
 
-    //cadastrando evento
-    async registerEvent() {
-        response.status(200).json({
-            message: "register event"
-        });
+    //cadastrar evento
+    async registerEvent(request, response) {
+
+        const {
+            name,
+            description,
+            modality,
+            date,
+        } = request.body;
+
+        const dataNeweEvent = {
+            name, description, modality, date
+        };
+
+        try {
+            await knex("events").insert(dataNeweEvent);
+        } catch (error) {
+            throw new AppError("Não foi possivel cadastrar o evento", 400)
+        }
+
+        response.status(200).json();
     };
 
-    //editando evento
+    //editar evento
     async editEvent(request, response) {
-        response.status(200).json({
-            message: "editing event"
-        });
+
+        const { id, name, description, modality } = request.body;
+
+        const eventUpdate = await knex("events").where({ id }).first();
+
+        try {
+
+            await knex("events").update({
+                name: name ? name : eventUpdate.name,
+                description: description ? description : eventUpdate.description,
+                modality: modality ? modality : eventUpdate.modality,
+            }).where({ id })
+
+        } catch (error) {
+            throw new AppError("Não foi póssivel editar o evento, tente novamente", 400)
+        }
+
+        response.status(200).json();
     };
+
+    //deletar evento
+    async deleteEvent(request, response) {
+        const { id } = request.params;
+
+        try {
+
+            await knex("events").where({ id }).del()
+        } catch (error) {
+            throw new AppError("Não foi póssivel deletar o evento", 400)
+        }
+
+        response.status(200).json()
+    }
 
 
 };
