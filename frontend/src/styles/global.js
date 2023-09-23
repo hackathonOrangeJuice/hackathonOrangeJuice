@@ -13,6 +13,7 @@ export default createGlobalStyle`
     }
 
     body {
+        font-family: "Raleway";
         position: relative;
         overflow-x: hidden;
         overflow-y: hidden;

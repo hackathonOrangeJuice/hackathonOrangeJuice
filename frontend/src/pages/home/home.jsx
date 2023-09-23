@@ -11,7 +11,7 @@ export function Home() {
       <header>
         <div className='Logo-Menu'>
           <img src='./menu.png'></img>
-          <img src='./logo.png'></img>
+          <img src='./logo.png' id='logo'></img>
         </div>
         <div className='Enter'>
           <p>Inscreva-se</p>
@@ -20,9 +20,9 @@ export function Home() {
       </header>
       <main>
         <h1>Oranje Juice</h1>
-        <h1>Hackathon</h1>
+        <h1><span>Hackathon</span></h1>
         <p>Esse é um projeto desenvolvido em react e node.js para organizar eventos 
-          em calendário e marcar presença nos principais eventos do ano!</p>
+          em calendário e marcar presença nos principais e diversos eventos do ano!</p>
         <button>Comece aqui <img src='./seta.png'></img></button>
       </main>
     </Container>
