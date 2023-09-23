@@ -14,8 +14,8 @@ export default createGlobalStyle`
 
     body {
         font-family: "Raleway";
-        background-image: url('fundo.jpg'); 
-        background-size: cover; 
+        //background-image: url('fundo.jpg'); 
+        //background-size: cover; 
         background-position: center; 
         background-repeat: no-repeat;
         position: relative;
