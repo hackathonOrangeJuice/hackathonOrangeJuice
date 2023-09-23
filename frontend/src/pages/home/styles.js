@@ -2,12 +2,21 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 
+    background-image: url('fundo.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    backdrop-filter: brightness(50%);
+    overflow: hidden;
+
     .hide {
         display: none;
     }
 
     header {
-        padding: 2rem 10rem 0;
+        padding: 2rem 11rem 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
