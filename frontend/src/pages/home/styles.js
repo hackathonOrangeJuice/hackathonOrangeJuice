@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 
+    .hide {
+        display: none;
+    }
+
     header {
         padding: 2rem 10rem 0;
         display: flex;
@@ -100,11 +104,11 @@ export const Container = styled.div`
         padding: 2rem 4rem;
     }
 
-    .Menu-Login {
+    .Menu-Login, .Menu-Register {
         text-align: right;
     }
 
-    .Menu-Login img {
+    .Menu-Login img, .Menu-Register img {
         width: 1.6rem;
         cursor: pointer;
     }
@@ -114,14 +118,14 @@ export const Container = styled.div`
         text-align: center;
     }
 
-    .Login h2 {
+    .Login h2, .Register h2 {
         text-transform: uppercase;
         color: #ff9900;
         font-weight: 700;
         font-size: 2.8rem;
     }
 
-    .Login p {
+    .Login p,  {
         font-size: 1.3rem;
         font-weight: 400;
     }
@@ -140,7 +144,7 @@ export const Container = styled.div`
         margin-top: 1.5rem;
     }
 
-    .Login-Inputs input {
+    .Login-Inputs input, .Register-Inputs input {
         font-family: "Raleway";
         padding: .5rem .8rem;
         width: 15rem;
@@ -148,18 +152,18 @@ export const Container = styled.div`
         border: .05rem solid black;
     }
 
-    .Login-Inputs .Register-Text {
+    .Login-Inputs .Register-Text, .Register .Login-Text {
         margin-top: .5rem;
         margin-left: 4.4rem;
         font-size: .8rem;
     }
 
-    .Login-Inputs span {
+    .Login-Inputs span, .Register span {
         font-weight: 700;
         cursor: pointer;
     }
 
-    .Login-Inputs button {
+    .Login-Inputs button, .Register-Buttons button {
         margin-top: .5rem;
         width: 15rem;
         border-radius: .5rem;
@@ -180,13 +184,59 @@ export const Container = styled.div`
         justify-content: center;
     }
 
-    .Networks-Login img {
+    .Networks-Login img, .Networks-Register img {
         width: 2.5rem;
         cursor: pointer;
     }
 
-    .Networks-Login .insta {
+    .Networks-Login .insta, .Networks-Register .insta {
         width: 2.7rem;
+    }
+
+    .Div-Register {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 45rem;
+        height: 100vh;
+        background-color: white;
+        padding: 2rem 4rem;
+    }
+
+    .Register {
+        margin-top: 5rem;
+    }
+
+    .Register p {
+        font-size: 1.2rem;
+        width: 23rem;
+    }
+
+    .Register-Inputs {
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .Register-Inputs p {
+        width: 15rem;
+        margin-bottom: .7rem;
+    }
+
+    .Register .Login-Text {
+        margin-left: 0;
+    }
+
+    .Register-Buttons {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .Networks-Register {
+        margin-top: 7.5rem;
     }
 
 `;
