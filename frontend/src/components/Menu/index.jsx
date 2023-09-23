@@ -26,7 +26,20 @@ export function Menu() {
                 <Text>Presencial</Text>
                 <Text>Online</Text>
 
-                <TextTheme>Tema</TextTheme>
+                <TextTheme>Mês</TextTheme>
+
+                <Text>Janeiro</Text>
+                <Text>Fevereiro</Text>
+                <Text>Março</Text>
+                <Text>Abril</Text>
+                <Text>Maio</Text>
+                <Text>Junho</Text>
+                <Text>Julho</Text>
+                <Text>Agosto</Text>
+                <Text>Setembro</Text>
+                <Text>Outubro</Text>
+                <Text>Novembro</Text>
+                <Text>Dezembro</Text>
 
             </ContainerInfoMenu>
 
