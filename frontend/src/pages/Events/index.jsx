@@ -1,8 +1,6 @@
 import {
     Container,
     ContainerEvents,
-
-
 } from "./style"
 
 import { Menu } from "../../components/Menu"
