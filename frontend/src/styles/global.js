@@ -21,6 +21,7 @@ export default createGlobalStyle`
         position: relative;
         height: 100vh;
         backdrop-filter: brightness(50%);
+        overflow: hidden;
     }
 
 `;
