@@ -17,6 +17,8 @@ import { useNavigate } from "react-router-dom"
 export function CardEvents({
     date,
     event,
+    setDataSelected,
+    setShowRegister,
 }) {
 
     const navigate = useNavigate();
@@ -26,6 +28,10 @@ export function CardEvents({
         navigate(`/event/${date}`)
     }
 
+    function handleShowRegister(){
+        setDataSelected(date);
+        setShowRegister(true);
+    }
 
     return (
         <Container>
@@ -54,7 +60,12 @@ export function CardEvents({
 
                     {
                         !event ?
-                            <ButtonRemove>adicionar evento<img src='./lixo.png' className='img-button'></img></ButtonRemove>
+                            <ButtonRemove
+                            onClick={handleShowRegister}
+
+                            >
+                                adicionar evento
+                                <img src='./lixo.png' className='img-button'></img></ButtonRemove>
                             : ""
                     }
 

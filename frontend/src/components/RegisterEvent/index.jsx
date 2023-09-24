@@ -15,15 +15,17 @@ import {
 } from './style'
 
 import { Controller, useForm } from "react-hook-form"
+import { api } from '../../axios'
 
-export function RegisterEvent() {
-    const { control, handleSubmit } = useForm()
+export function RegisterEvent({ date, showRegister, setShowRegister }) {
+    const { control, handleSubmit, reset } = useForm()
 
-    async function handleRegisterNewEvent({name,description,modality}) {
+    async function handleRegisterNewEvent({ name, description, modality }) {
 
-        console.log(name,description,modality)
+        console.log(name, description, modality, date)
         try {
-            await api.post("/events", {
+            await api.post("/events/", {
+
                 name,
                 description,
                 modality,
@@ -37,7 +39,9 @@ export function RegisterEvent() {
         }
     }
     return (
-        <Container className='RegisterEvent hideA'>
+        <Container
+            className={showRegister ? "RegisterEvent" : "RegisterEvent hide"}
+        >
             <IconClose
                 src='./public/x-solid.svg'
             />
@@ -148,7 +152,13 @@ export function RegisterEvent() {
                 <Button
                     onClick={handleSubmit(handleRegisterNewEvent)}
                 >Cadastrar</Button>
-                <Button>Voltar</Button>
+                <Button
+                    onClick={() => {
+                        setShowRegister(false)
+                        reset()
+                        
+                    }}
+                >Voltar</Button>
             </ContainerButton>
 
             <ContainerSocialNetworks>

@@ -23,6 +23,8 @@ export function Events() {
     const [days, setDays] = useState([]);
     const [events, setEvents] = useState([]);
     const [monthSelected, setMonthSelected] = useState(new Date().getMonth());
+    const [dateSelected, setDateSelected] = useState();
+    const [showRegister, setShowRegister] = useState(false)
 
     const getDaysInMonth = (year, month) => {
         const startDate = startOfMonth(new Date(year, month, 1));
@@ -30,7 +32,7 @@ export function Events() {
         const daysOfMonth = eachDayOfInterval({ start: startDate, end: endDate });
         return daysOfMonth;
     };
-    
+
     function setCurrentDate() {
 
         const year = new Date().getFullYear();
@@ -55,12 +57,18 @@ export function Events() {
     useEffect(() => {
         setCurrentDate();
         fetchEvents();
-    }, [monthSelected])
+    }, [monthSelected, dateSelected, showRegister])
 
     return (
         <Container>
             <Menu />
-            <RegisterEvent className=""></RegisterEvent>
+
+            <RegisterEvent
+                date={dateSelected}
+                showRegister={showRegister}
+                setShowRegister={setShowRegister}
+            />
+
             <ContainerEvents>
 
                 {
@@ -78,6 +86,8 @@ export function Events() {
                                     key={index}
                                     date={String(dateFormatted)}
                                     event={dayWithEvent}
+                                    setDataSelected={setDateSelected}
+                                    setShowRegister={setShowRegister}
 
                                 />
                             );
