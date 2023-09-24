@@ -46,7 +46,7 @@ export const ContainerEvents = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 7px;
+    padding: .5rem 1rem;
     gap: 8px;
 
     border-radius: 10px;
@@ -100,7 +100,7 @@ font-weight: bold;
 background-color: #FF9900;
 color: white;
 height: 2rem;
-width: 100%;
+width: 50%;
 
 border-radius: 10px;
 border: none;
@@ -112,17 +112,18 @@ cursor: pointer;
 }
 
 `
-export const ButtonPresence = styled.button`
-font-weight: bold;
-background-color: #218408;
-color: white;
-height: 2rem;
-width: 100%;
+export const ButtonRemove = styled.button`
+background-color: #eb1e1e;
+width: 10%;
 
 border-radius: 10px;
 border: none;
 
 cursor: pointer;
+
+    .img-button {
+        width: 1rem;
+    }
 
 @media screen and (max-width: 800px) {
     font-size: .6rem;

@@ -1,14 +1,37 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-
+position: relative;
 width: 100vw;
 height: 100vh;
 background-color: #170600;
 
 display: flex;
 
+    .hide {
+        display: none;
+    }
 `
+
+export const ButtonAddEvent = styled.button`
+    
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    font-family: "Raleway";
+    font-weight: 700;
+    padding: .5rem;
+    text-align: left;
+    color: black;
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+
+    .image-button {
+        width: 1rem;
+    }
+
+`;
 
 export const ContainerEvents = styled.div`
 
