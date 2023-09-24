@@ -76,6 +76,7 @@ function AuthContextProvider({ children }) {
         <AuthContext.Provider value={{
             user,
             setUser,
+            signup,
         }}>
             {children}
         </AuthContext.Provider>
