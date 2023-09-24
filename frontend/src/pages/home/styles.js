@@ -134,7 +134,7 @@ export const Container = styled.div`
         font-size: 2.8rem;
     }
 
-    .Login p,  {
+    .Login p  {
         font-size: 1.3rem;
         font-weight: 400;
     }
@@ -246,6 +246,112 @@ export const Container = styled.div`
 
     .Networks-Register {
         margin-top: 7.5rem;
+    }
+
+    @media screen and (max-width: 800px) {
+
+        header {
+            padding: 1rem;
+        }
+
+        .Enter p {
+            font-size: .8rem;
+        }
+
+        .Enter button {
+            font-size: .8rem;
+        }
+
+        main {
+            margin-top: 5rem;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        main h1 {
+            font-size: 2.5rem;
+        }
+
+        main p {
+            margin: 1rem auto;
+            font-size: 1rem;
+            width: 25rem;
+            text-shadow: 2px 2px black;
+        }
+
+        main button {
+            margin: 0 auto;
+            border: .05rem solid black;
+        }
+
+        .Div-Login {
+            width: 100%;
+        }
+
+        .Login h2, .Register h2 {
+            font-size: 2rem;
+        }
+
+        .Login p {
+            font-size: 1rem;
+        }
+
+        .Login-Inputs p {
+            font-size: 1rem;
+            margin-left: 4.3rem;
+        }
+
+        .Login-Inputs input, .Register-Inputs input {
+            padding: .3rem .5rem;
+        }
+
+        .Login-Inputs .Register-Text, .Register .Login-Text {
+            font-size: .6rem;
+        }
+
+        .Login-Inputs button, .Register-Buttons button {
+            padding: .3rem;
+        }
+
+        .Menu-Login img, .Menu-Register img {
+            width: 1.2rem;
+            cursor: pointer;
+        }
+
+        .Div-Register {
+            padding: 1rem;
+            width: 100%;
+        }
+
+        .Register p {
+            font-size: 1rem;
+        }
+
+        .Register-Inputs p {
+            width: 12rem;
+        }
+
+        .Register-Inputs input {
+            width: 12rem;
+        }
+
+        .Register-Inputs {
+            gap: 1rem;
+        }
+
+        .Register-Buttons {
+            gap: 1rem;
+        }
+
+        .Register-Buttons button {
+            width: 12rem;
+        }
+
+        .Networks-Register {
+            display: flex;
+            align-items: center;
+        }
+
     }
 
 `;

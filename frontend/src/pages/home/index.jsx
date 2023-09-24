@@ -44,7 +44,7 @@ export function Home() {
           <img className='insta' src='./insta.png'></img>
         </div>
       </div>
-      <div className='Div-Register hide'>
+      <div className='Div-Register'>
         <div className='Menu-Register'>
           <img src='x.png'></img>
         </div>

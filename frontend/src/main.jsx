@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Home } from './pages/Home/';
+import { Home } from './pages/home';
 import { Events } from "./pages/Events";
 import { Event } from './pages/Event/';
 import GlobalStyle  from './styles/global';
