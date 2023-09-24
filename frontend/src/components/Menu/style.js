@@ -17,6 +17,10 @@ padding: 1rem 0 0;
 border-right: 2px solid gray;
 overflow: hidden;
 
+@media screen and (max-width: 800px) {
+    width: 35vw;
+}
+
 `
 
 export const ContainerInfoMenu = styled.div`
@@ -34,12 +38,21 @@ color: white;
 font-size: 1.2rem;
 font-weight: 500;
 margin-bottom: 1rem;
+
+@media screen and (max-width: 800px) {
+    width: 35vw;
+    font-size: 1rem;
+}
 `
 export const TextMain = styled.h1`
 color: white;
 font-size: 1.2rem;
 font-weight: 500;
 margin-bottom: 1rem;
+
+@media screen and (max-width: 800px) {
+    font-size: 1rem;
+}
 
 `
 export const Text = styled.p`
@@ -51,6 +64,10 @@ font-weight: 300;
 margin-bottom: .5rem;
 
 cursor: pointer;
+
+@media screen and (max-width: 800px) {
+    font-size: .8rem;
+}
 
 `
 
@@ -64,6 +81,10 @@ margin:  .5rem 0 1rem;
 
 cursor: pointer;
 
+@media screen and (max-width: 800px) {
+    font-size: 1rem;
+}
+
 `
 
 export const LogoImage = styled.img`
@@ -71,6 +92,9 @@ export const LogoImage = styled.img`
 width: 50%;
 margin: 0 auto 3rem;
 
+@media screen and (max-width: 800px) {
+    width: 70%;
+}
 
 `
 
@@ -81,5 +105,9 @@ height: 20vh;
 
 
 border-top: 2px solid gray;
+
+@media screen and (max-width: 800px) {
+    width: 30vw;
+}
 
 `

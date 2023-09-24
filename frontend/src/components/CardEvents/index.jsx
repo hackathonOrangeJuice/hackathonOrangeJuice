@@ -20,7 +20,7 @@ export function CardEvents({
     return (
         <Container>
             <ContainerDate>
-                <Date>{date}</Date>
+                <Date>Dia {date}</Date>
             </ContainerDate>
             <ContainerEvents>
                 <Title>{ title }</Title>
