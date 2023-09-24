@@ -32,10 +32,10 @@ export function Register() {
                 <input type='password'></input>
                 </div>
             </div>
-            <p className='Login-Text'>Já possui uma conta? <span>Faça login</span></p>
+            <p className='Login-Text'>Já possui uma conta? <span className='login-text'>Faça login</span></p>
             <div className='Register-Buttons'>
                 <button>Cadastrar</button>
-                <button>Voltar</button>
+                <button className='btn-back'>Voltar</button>
             </div>
             <div className='Networks-Register'>
                 <img src='./linkedin.svg'></img>
