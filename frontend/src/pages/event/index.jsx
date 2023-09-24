@@ -30,7 +30,7 @@ export function Event() {
                 </div>
                 <div className='Networks'>
                     <img src='linkedin.png'></img>
-                    <img src='insta.png' className='insta'></img>
+                    <img src='instagram.svg' className='insta'></img>
                 </div>
             </footer>
 

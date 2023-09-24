@@ -9,8 +9,7 @@ import GlobalStyle from './styles/global';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <GlobalStyle />
-    <AuthContextProvider>
-      <Event />
-    </AuthContextProvider>
+    <Event />
   </React.StrictMode>
+>>>>>>> a46098cf1cd69d148dc4e928919dcb3f3343af7d
 )
