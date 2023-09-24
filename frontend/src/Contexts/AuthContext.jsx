@@ -13,21 +13,21 @@ function AuthContextProvider({ children }) {
     const tokenLocalStorage = "@orangeJuice:token";
     const infoLoginLocalStorage = "@orangeJuice:login"
 
-    function setLocalStorageInfo(user, token, infoLogin){
+    function setLocalStorageInfo(user, token, infoLogin) {
         localStorage.setItem(userLocalStorage, JSON.stringify(user));
         localStorage.setItem(tokenLocalStorage, JSON.stringify(`Bearer ${token}`));
         localStorage.setItem(infoLoginLocalStorage, JSON.stringify(infoLogin))
     };
 
-    function getItemLocalStorage(){
+    function getItemLocalStorage() {
         const user = localStorage.getItem(infoLoginLocalStorage);
-    
+
         const userParseJson = user ? JSON.parse(user) : ""
 
         console.log("eu sou o user => ", userParseJson)
 
-        return  userParseJson;
-    }
+        return userParseJson;
+    };
 
     async function signln(email, password) {
 
@@ -35,6 +35,8 @@ function AuthContextProvider({ children }) {
             const response = await api.post("/sessions/signln", { email, password });
 
             setUser(response.data);
+
+            console.log("eu sou token => ", response.data.token)
 
             api.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`
 
@@ -49,12 +51,21 @@ function AuthContextProvider({ children }) {
             throw new AppError("Não foi possivel efetuar o login", 400)
         }
 
-    }
+    };
+
+    async function signup(name, email, password) {
+        try {
+            await api.post("/sessions/signup", { name, email, password })
+            signln(email,password);
+
+        } catch (error) {
+            throw new AppError("Não foi possivel criar conta", 400)
+        }
+    };
 
     useEffect(() => {
         const user = getItemLocalStorage();
-
-        signln(user.email, user.password)
+        signln("offakihito2.02gmail.com","admin1234")
     }, [])
 
     return (
