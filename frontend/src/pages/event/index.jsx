@@ -52,15 +52,15 @@ export function Event() {
         <Container>
             <Header>
                 <ImgBack
-                 src='seta-voltar.png'
+                 src='seta-voltar.png' alt='seta branca para esquerda,indicando "voltar"'
                  onClick={handleToGoEvents}></ImgBack>
-                <ImgLogo src='./logo.png'></ImgLogo>
+                <ImgLogo src='./logo.png' alt='logo da orange juice'></ImgLogo>
             </Header>
             <Main>
                 <Date>{params.date ? params.date : ""}</Date>
                 <TitleEvent>{infoEvent ? infoEvent.name : ""}</TitleEvent>
                 <Location>
-                    <ImgLocation src='./globo.png'></ImgLocation>
+                    <ImgLocation src='./globo.png' alt='imagem de globo para representar a modalidade do evento'></ImgLocation>
                     <TextLocation>{infoEvent ? infoEvent.modality : ""}</TextLocation>
                 </Location>
                 <Text>{infoEvent ? infoEvent.description : ""}</Text>
@@ -68,15 +68,15 @@ export function Event() {
             </Main>
             <Footer>
                 <Buttons>
-                    <ButtonFavorite className='btn-favorite'><ImgButton src='coracao.png'></ImgButton></ButtonFavorite>
+                    <ButtonFavorite className='btn-favorite'><ImgButton src='coracao.png' alt='dar like'></ImgButton></ButtonFavorite>
                     <ButtonCheck className='btn-check'>
-                        <ImgButtonCheck src='./laranja.png'></ImgButtonCheck>
+                        <ImgButtonCheck src='./laranja.png' alt='ícone de uma laranja suculenta'></ImgButtonCheck>
                         <TextButtonCheck>Marcar presença</TextButtonCheck>
                     </ButtonCheck>    
                 </Buttons>
                 <Networks>
-                    <ImgNetworks src='linkedin.svg'></ImgNetworks>
-                    <ImgNetworks src='instagram.svg'></ImgNetworks>
+                    <ImgNetworks src='linkedin.svg' alt='logo do linkedin'></ImgNetworks>
+                    <ImgNetworks src='instagram.svg' alt='logo do instagram'></ImgNetworks>
                 </Networks>
             </Footer>
 

@@ -36,7 +36,7 @@ export function ScreenLogin() {
         <Container>
             <DivLogin className="Div-Login hide">
                 <MenuLogin>
-                    <ImgClose src="./x.png" className='close-login'></ImgClose>
+                    <ImgClose src="./x.png" className='close-login' alt="fechar"></ImgClose>
                 </MenuLogin>
                 <Login>
                     <TitleLogin>Login</TitleLogin>
@@ -84,8 +84,8 @@ export function ScreenLogin() {
                     </LoginInputs>
                 </Login>
                 <NetworksLogin>
-                    <ImgNetworks src='./linkedin.svg'></ImgNetworks>
-                    <ImgNetworks src='./instagram.svg'></ImgNetworks>
+                    <ImgNetworks src='./linkedin.svg' alt="logotipo do linkedin"></ImgNetworks>
+                    <ImgNetworks src='./instagram.svg' alt="logotipo do instagram"></ImgNetworks>
                 </NetworksLogin>
             </DivLogin>
         </Container>

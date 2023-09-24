@@ -27,7 +27,7 @@ export function ScreenRegister() {
         <Container>
             <DivRegister className='Div-Register hide'>
                 <MenuRegister>
-                    <ImgClose src='x.png' className='close-register'></ImgClose>
+                    <ImgClose src='x.png' className='close-register' alt='fechar'></ImgClose>
                 </MenuRegister>
                 <Register>
                     <TitleRegister>Cadastre-se</TitleRegister>
@@ -119,8 +119,8 @@ export function ScreenRegister() {
                         <BtnDivRegister className='btn-back'>Voltar</BtnDivRegister>
                     </RegisterButtons>
                     <NetworksRegister>
-                        <ImgNetworks src='./linkedin.svg'></ImgNetworks>
-                        <ImgNetworks className='insta' src='./instagram.svg'></ImgNetworks>
+                        <ImgNetworks src='./linkedin.svg' alt='logo do linkedin'></ImgNetworks>
+                        <ImgNetworks className='insta' src='./instagram.svg' alt='logo do instagram'></ImgNetworks>
                     </NetworksRegister>
                 </Register>
             </DivRegister>
