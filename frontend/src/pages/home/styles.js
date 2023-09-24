@@ -318,6 +318,40 @@ export const Container = styled.div`
             cursor: pointer;
         }
 
+        .Div-Register {
+            padding: 1rem;
+            width: 100%;
+        }
+
+        .Register p {
+            font-size: 1rem;
+        }
+
+        .Register-Inputs p {
+            width: 12rem;
+        }
+
+        .Register-Inputs input {
+            width: 12rem;
+        }
+
+        .Register-Inputs {
+            gap: 1rem;
+        }
+
+        .Register-Buttons {
+            gap: 1rem;
+        }
+
+        .Register-Buttons button {
+            width: 12rem;
+        }
+
+        .Networks-Register {
+            display: flex;
+            align-items: center;
+        }
+
     }
 
 `;
