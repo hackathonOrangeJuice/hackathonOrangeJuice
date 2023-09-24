@@ -97,6 +97,7 @@ export const TextPassword = styled.p`
     text-align: left;
     margin-left: 3.5rem;
     margin-top: 1.5rem;
+    margin-bottom: .7rem;
 
     @media screen and (max-width: 800px) {
         

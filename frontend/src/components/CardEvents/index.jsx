@@ -7,7 +7,7 @@ import {
     Title,
     Description,
     ButtonDetails,
-    ButtonPresence,
+    ButtonRemove,
 } from './style'
 
 export function CardEvents({
@@ -28,7 +28,7 @@ export function CardEvents({
 
                 <ContainerButton>
                     <ButtonDetails>Detalhes</ButtonDetails>
-                    <ButtonPresence>Marcar presença</ButtonPresence>
+                    <ButtonRemove><img src='./lixo.png' className='img-button'></img></ButtonRemove>
                 </ContainerButton>
 
             </ContainerEvents>

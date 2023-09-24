@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import {
     Container,
     ContainerEvents,
+    ButtonAddEvent
 } from "./style"
 
 
@@ -13,6 +14,7 @@ import { ptBR } from 'date-fns/locale';
 
 import { Menu } from "../../components/Menu"
 import { CardEvents } from "../../components/CardEvents"
+import { RegisterEvent } from "../../components/RegisterEvent";
 import { AppError } from "../../utils/AppError";
 import { useAuth } from "../../Contexts/AuthContext";
 
@@ -45,7 +47,10 @@ export function Events() {
     return (
         <Container>
             <Menu />
+            <RegisterEvent className="RegisterEvent hide"></RegisterEvent>
             <ContainerEvents>
+
+                <ButtonAddEvent><img src="icon-plus.png" className="image-button"></img> Adicionar Evento</ButtonAddEvent>
 
                 {
                     days.map((date, index) => {
