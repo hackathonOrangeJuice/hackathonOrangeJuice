@@ -1,31 +1,32 @@
 import { React } from "react";
-import { Container } from "./styles.js";
+import { Container, DivLogin, MenuLogin, ImgClose, Login, TitleLogin, SubtitleLogin, LoginInputs, TextEmail, TextPassword, Input, PasswordInput, RegisterText, 
+SpanRegister, ButtonEnter, NetworksLogin, ImgNetworks } from "./styles.js";
 
-export function Login() {
+export function ScreenLogin() {
 
     return (
     <Container>
-        <div className='Div-Login hide'>
-            <div className='Menu-Login'>
-            <img src='x.png' className='close-login'></img>
-            </div>
-            <div className='Login'>
-            <h2>Login</h2>
-            <p>Seja bem vindo de volta!</p>
-            <div className='Login-Inputs'>
-                <p>E-mail</p>
-                <input type='text'></input>
-                <p id='password'>Senha</p>
-                <input type='password'></input>
-                <p className='Register-Text'>Não possui uma conta? <span className='register-text'>Cadastre-se</span></p>
-                <button>Entrar</button>
-            </div>
-            </div>
-            <div className='Networks-Login'>
-            <img src='./linkedin.svg'></img>
-            <img className='insta' src='./instagram.svg'></img>
-            </div>
-        </div>
+        <DivLogin className="Div-Login hide">
+            <MenuLogin>
+            <ImgClose src="./x.png" className='close-login'></ImgClose>
+            </MenuLogin>
+            <Login>
+            <TitleLogin>Login</TitleLogin>
+            <SubtitleLogin>Seja bem vindo de volta!</SubtitleLogin>
+            <LoginInputs>
+                <TextEmail>E-mail</TextEmail>
+                <Input></Input>
+                <TextPassword>Senha</TextPassword>
+                <PasswordInput></PasswordInput>
+                <RegisterText>Não possui uma conta? <SpanRegister className="register-text">Cadastre-se</SpanRegister></RegisterText>
+                <ButtonEnter>Entrar</ButtonEnter>
+            </LoginInputs>
+            </Login>
+            <NetworksLogin>
+            <ImgNetworks src='./linkedin.svg'></ImgNetworks>
+            <ImgNetworks src='./instagram.svg'></ImgNetworks>
+            </NetworksLogin>
+        </DivLogin>
     </Container>
     )
 

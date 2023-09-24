@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from 'react'
 import { Container, Header, MenuLogo, ImageMenu, ImageLogo, Enter, BtnRegister, BtnLogin, Main, TitlePage, Span, Text, Button, ImgButton } from './styles'
-import { Login } from '../../components/Login';
+import { ScreenLogin } from '../../components/Login';
 import { Register } from '../../components/Register';
 
 export function Home() {
@@ -106,7 +106,7 @@ export function Home() {
           em calendário e marcar presença nos principais e diversos eventos do ano!</Text>
         <Button className='btn-start'>Comece aqui <ImgButton src='./seta.png'></ImgButton></Button>
       </Main>
-      <Login></Login>
+      <ScreenLogin></ScreenLogin>
       <Register></Register>
     </Container>
   )
