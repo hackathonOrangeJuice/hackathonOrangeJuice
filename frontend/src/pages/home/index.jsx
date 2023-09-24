@@ -1,7 +1,65 @@
-import { React } from 'react'
+import { React, useState, useEffect } from 'react'
 import { Container } from './styles'
 
 export function Home() {
+
+  const [mounted,setMounted] = useState(false)
+     
+    useEffect(() => {
+        
+        if(mounted){
+          const BtnLogin = document.querySelector(".btn-login");
+          const BtnRegister = document.querySelector(".btn-register");
+          const ScreenLogin = document.querySelector(".Div-Login");
+          const ScreenRegister = document.querySelector(".Div-Register");
+          const BtnCloseLogin = document.querySelector(".close-login");
+          const BtnCloseRegister = document.querySelector(".close-register");
+          const RegisterText = document.querySelector(".register-text");
+
+          BtnLogin.onclick = function() {
+            if(ScreenLogin.classList.contains("hide")) {
+              setTimeout(function() {
+              }, 500);
+              ScreenLogin.classList.remove("hide");
+              ScreenLogin.style.animation = "popupEnter linear .5s";
+            }
+          }
+
+          BtnRegister.onclick = function() {
+            if(ScreenRegister.classList.contains("hide")) {
+              setTimeout(function() {
+              }, 500);
+              ScreenRegister.classList.remove("hide");
+              ScreenRegister.style.animation = "popupEnter linear .5s";
+            }
+          }
+
+          RegisterText.onclick = function() {
+            ScreenLogin.classList.add("hide")
+            if(ScreenRegister.classList.contains("hide")) {
+              setTimeout(function() {
+              }, 500);
+              ScreenRegister.classList.remove("hide");
+              ScreenRegister.style.animation = "popupEnter linear .5s";
+            }
+          }
+
+          BtnCloseLogin.onclick = function() {
+            ScreenLogin.classList.add("hide");
+          }
+
+          BtnCloseRegister.onclick = function() {
+            ScreenRegister.classList.add("hide");
+          }
+
+        }
+        else{
+            setMounted(true);
+        }
+
+  },[mounted])
+
+
 
   return (
     <Container>
@@ -12,8 +70,8 @@ export function Home() {
           <img src='./logo.png' id='logo'></img>
         </div>
         <div className='Enter'>
-          <p>Inscreva-se</p>
-          <button>Login</button>
+          <p className='btn-register'>Inscreva-se</p>
+          <button className='btn-login'>Login</button>
         </div>
       </header>
       <main>
@@ -25,7 +83,7 @@ export function Home() {
       </main>
       <div className='Div-Login hide'>
         <div className='Menu-Login'>
-          <img src='x.png'></img>
+          <img src='x.png' className='close-login'></img>
         </div>
         <div className='Login'>
           <h2>Login</h2>
@@ -35,18 +93,18 @@ export function Home() {
             <input type='text'></input>
             <p id='password'>Senha</p>
             <input type='password'></input>
-            <p className='Register-Text'>Não possui uma conta? <span>Cadastre-se</span></p>
+            <p className='Register-Text'>Não possui uma conta? <span className='register-text'>Cadastre-se</span></p>
             <button>Entrar</button>
           </div>
         </div>
         <div className='Networks-Login'>
-          <img src='./linkedin.png'></img>
-          <img className='insta' src='./insta.png'></img>
+          <img src='./linkedin.svg'></img>
+          <img className='insta' src='./instagram.svg'></img>
         </div>
       </div>
       <div className='Div-Register hide'>
         <div className='Menu-Register'>
-          <img src='x.png'></img>
+          <img src='x.png' className='close-register'></img>
         </div>
         <div className='Register'>
           <h2>Cadastre-se</h2>
@@ -77,8 +135,8 @@ export function Home() {
             <button>Voltar</button>
           </div>
           <div className='Networks-Register'>
-            <img src='./linkedin.png'></img>
-            <img className='insta' src='./insta.png'></img>
+            <img src='./linkedin.svg'></img>
+            <img className='insta' src='./instagram.svg'></img>
         </div>
         </div>
       </div>

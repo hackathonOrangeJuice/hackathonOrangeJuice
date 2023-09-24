@@ -8,10 +8,6 @@ import GlobalStyle  from './styles/global';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <GlobalStyle />
-    <Event />
-<<<<<<< HEAD
+    <Home />
   </React.StrictMode>,
-=======
-  </React.StrictMode>
->>>>>>> a46098cf1cd69d148dc4e928919dcb3f3343af7d
 )

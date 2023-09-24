@@ -16,4 +16,28 @@ export default createGlobalStyle`
         font-family: "Raleway";
     }
 
+    @keyframes popupEnter {
+    0% {
+        opacity: 1;
+        transform: translateX(350px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    }
+
+    @keyframes downtopmobile {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(-150px);
+    }
+}
+
 `;

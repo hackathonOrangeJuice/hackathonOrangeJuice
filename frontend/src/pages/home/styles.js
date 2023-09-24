@@ -15,6 +15,10 @@ export const Container = styled.div`
         display: none;
     }
 
+    .visible {
+        display: block;
+    }
+
     header {
         padding: 2rem 11rem 0;
         display: flex;
