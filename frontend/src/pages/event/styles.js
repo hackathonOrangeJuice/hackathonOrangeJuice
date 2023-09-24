@@ -129,8 +129,68 @@ export const Container = styled.div`
         width: 2rem;
     }
 
-    .Networks .insta {
-        width: 2.2rem;
+    @media screen and (max-width: 800px) {
+    
+        padding: 1rem;
+
+        header {
+            gap: 1rem;
+        }
+
+        header .seta-voltar {
+            width: 1rem;
+            cursor: pointer;
+        }
+
+        header img {
+            width: 2.5rem;
+        }
+
+        main .Date {
+        width: 20rem;
+        font-size: 1.2rem;
+        }
+
+        main h2 {
+            font-size: 1.8em;
+        }
+
+        .Location {
+            gap: .3rem;
+        }
+
+        .Location img {
+            width: 1rem;
+        }
+
+        .Location p {
+            font-size: .8rem;
+        }
+
+        main p {
+            margin-top: .8rem;
+            width: 16rem;
+            font-size: .9rem;
+        }
+
+        main p span {
+            font-size: 1.1rem;
+        }
+
+        .Buttons button {
+            padding: .3rem 1rem;
+        }
+
+        .Buttons button img {
+            width: 1rem;
+        }
+
+        .Button-Check {
+            gap: .3rem;
+            padding: .3rem 1rem;
+            font-size: .9rem;
+        } 
+    
     }
 
 `;
