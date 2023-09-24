@@ -25,6 +25,7 @@ export function Events() {
     const [monthSelected, setMonthSelected] = useState(new Date().getMonth());
     const [dateSelected, setDateSelected] = useState();
     const [showRegister, setShowRegister] = useState(false)
+    const [reload, setReload ] = useState(false)
 
     const getDaysInMonth = (year, month) => {
         const startDate = startOfMonth(new Date(year, month, 1));
@@ -53,11 +54,16 @@ export function Events() {
 
     }
 
+    function reloadPage(){
+        if(reload) setReload(false)
+        else setReload(true)
+    }
+
 
     useEffect(() => {
         setCurrentDate();
         fetchEvents();
-    }, [monthSelected, dateSelected, showRegister])
+    }, [monthSelected, dateSelected, showRegister, reload])
 
     return (
         <Container>
@@ -88,6 +94,7 @@ export function Events() {
                                     event={dayWithEvent}
                                     setDataSelected={setDateSelected}
                                     setShowRegister={setShowRegister}
+                                    reload = {reloadPage}
 
                                 />
                             );

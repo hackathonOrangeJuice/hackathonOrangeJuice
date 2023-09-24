@@ -19,6 +19,7 @@ export function CardEvents({
     event,
     setDataSelected,
     setShowRegister,
+    reload,
 }) {
 
     const navigate = useNavigate();
@@ -31,6 +32,14 @@ export function CardEvents({
     function handleShowRegister(){
         setDataSelected(date);
         setShowRegister(true);
+    }
+
+    async function handleDeleteEvent(date){
+        try {
+            await api.delete(`/events/${date}`)
+        } catch (error) {
+            alert(error)
+        }
     }
 
     return (
@@ -54,7 +63,16 @@ export function CardEvents({
                     }
                     {
                         event ?
+<<<<<<< HEAD
                             <ButtonRemove><img src='./lixo.png' className='img-button' alt='remover'></img></ButtonRemove>
+=======
+                            <ButtonRemove
+                            onClick={() => {
+                                handleDeleteEvent(date)
+                                reload();
+                            }}
+                            ><img src='./lixo.png' className='img-button'></img></ButtonRemove>
+>>>>>>> 8f544daa91d0d9ce87cabc6ed4a8ff3e423da44c
                             : ""
                     }
 
