@@ -23,7 +23,7 @@ export function Home() {
           em calendário e marcar presença nos principais e diversos eventos do ano!</p>
         <button>Comece aqui <img src='./seta.png'></img></button>
       </main>
-      <div className='Div-Login hide'>
+      <div className='Div-Login'>
         <div className='Menu-Login'>
           <img src='x.png'></img>
         </div>

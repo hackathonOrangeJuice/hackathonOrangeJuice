@@ -134,7 +134,7 @@ export const Container = styled.div`
         font-size: 2.8rem;
     }
 
-    .Login p,  {
+    .Login p  {
         font-size: 1.3rem;
         font-weight: 400;
     }
@@ -282,6 +282,40 @@ export const Container = styled.div`
         main button {
             margin: 0 auto;
             border: .05rem solid black;
+        }
+
+        .Div-Login {
+            width: 100%;
+        }
+
+        .Login h2, .Register h2 {
+            font-size: 2rem;
+        }
+
+        .Login p {
+            font-size: 1rem;
+        }
+
+        .Login-Inputs p {
+            font-size: 1rem;
+            margin-left: 4.3rem;
+        }
+
+        .Login-Inputs input, .Register-Inputs input {
+            padding: .3rem .5rem;
+        }
+
+        .Login-Inputs .Register-Text, .Register .Login-Text {
+            font-size: .6rem;
+        }
+
+        .Login-Inputs button, .Register-Buttons button {
+            padding: .3rem;
+        }
+
+        .Menu-Login img, .Menu-Register img {
+            width: 1.2rem;
+            cursor: pointer;
         }
 
     }
