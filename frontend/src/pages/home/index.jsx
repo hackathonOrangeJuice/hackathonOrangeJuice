@@ -1,5 +1,7 @@
 import { React, useState, useEffect } from 'react'
 import { Container } from './styles'
+import { Login } from '../../components/Login';
+import { Register } from '../../components/Register';
 
 export function Home() {
 
@@ -63,7 +65,6 @@ export function Home() {
 
   return (
     <Container>
-      <div class="background-container"></div>
       <header>
         <div className='Logo-Menu'>
           <img src='./menu.png'></img>
@@ -81,65 +82,8 @@ export function Home() {
           em calendário e marcar presença nos principais e diversos eventos do ano!</p>
         <button>Comece aqui <img src='./seta.png'></img></button>
       </main>
-      <div className='Div-Login hide'>
-        <div className='Menu-Login'>
-          <img src='x.png' className='close-login'></img>
-        </div>
-        <div className='Login'>
-          <h2>Login</h2>
-          <p>Seja bem vindo de volta!</p>
-          <div className='Login-Inputs'>
-            <p>E-mail</p>
-            <input type='text'></input>
-            <p id='password'>Senha</p>
-            <input type='password'></input>
-            <p className='Register-Text'>Não possui uma conta? <span className='register-text'>Cadastre-se</span></p>
-            <button>Entrar</button>
-          </div>
-        </div>
-        <div className='Networks-Login'>
-          <img src='./linkedin.svg'></img>
-          <img className='insta' src='./instagram.svg'></img>
-        </div>
-      </div>
-      <div className='Div-Register hide'>
-        <div className='Menu-Register'>
-          <img src='x.png' className='close-register'></img>
-        </div>
-        <div className='Register'>
-          <h2>Cadastre-se</h2>
-          <p>Bem vindo a nossa plataforma de eventos! Vamos começar!</p>
-          <div className='Register-Inputs'>
-            <div className='Name'>
-              <p>Nome</p>
-              <input type='text'></input>
-            </div>
-            <div className='Email'>
-              <p>E-mail</p>
-              <input type='text'></input>
-            </div>
-          </div>
-          <div className='Register-Inputs'>
-            <div className='Password'>
-              <p>Senha</p>
-              <input type='password'></input>
-            </div>
-            <div className='Password'>
-              <p>Senha Novamente</p>
-              <input type='password'></input>
-            </div>
-          </div>
-          <p className='Login-Text'>Já possui uma conta? <span>Faça login</span></p>
-          <div className='Register-Buttons'>
-            <button>Cadastrar</button>
-            <button>Voltar</button>
-          </div>
-          <div className='Networks-Register'>
-            <img src='./linkedin.svg'></img>
-            <img className='insta' src='./instagram.svg'></img>
-        </div>
-        </div>
-      </div>
+      <Login></Login>
+      <Register></Register>
     </Container>
   )
 }
