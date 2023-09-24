@@ -12,6 +12,14 @@ export const Container = styled.div`
     z-index: 2;
     padding: 3rem 5rem;
 
+    .selected {
+        background-color: #eb1e1e;
+    }
+
+    .presence {
+        background-color: #01b013;
+    }
+
 `;
 
 export const Header = styled.div`
@@ -200,6 +208,8 @@ export const ButtonCheck = styled.div`
     border: .05rem solid black;
     padding: .5rem 1rem;
     border-radius: .5rem;
+    cursor: pointer;
+    transition: all .3s;
 
     @media screen and (max-width: 800px) {    
         padding: .3rem 1rem;
@@ -210,7 +220,10 @@ export const ButtonCheck = styled.div`
 
 `;
 
-export const CheckboxInput = styled.input.attrs({ type: 'checkbox' })`
+export const ImgButtonCheck = styled.img`
+
+    width: 1rem;
+
 `;
 
 export const TextButtonCheck = styled.p`

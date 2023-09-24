@@ -1,8 +1,33 @@
-import { React } from 'react';
+import { React, useEffect, useState } from 'react';
 import { Container, Header, ImgBack, ImgLogo, Main, Date, TitleEvent, Location, ImgLocation, TextLocation, Text, SpanPrice, Footer, Buttons, ButtonFavorite,
-ImgButton, ButtonCheck, CheckboxInput, TextButtonCheck, Networks, ImgNetworks } from './styles';
+ImgButton, ButtonCheck, ImgButtonCheck, TextButtonCheck, Networks, ImgNetworks } from './styles';
 
 export function Event() {
+
+    
+  const [mounted,setMounted] = useState(false)
+     
+  useEffect(() => {
+      
+      if(mounted){
+        const BtnFavorite = document.querySelector(".btn-favorite");
+        const BtnCheck = document.querySelector(".btn-check");
+
+        BtnFavorite.onclick = function() {
+            BtnFavorite.classList.toggle("selected");
+        }
+
+        BtnCheck.onclick = function() {
+            BtnCheck.classList.toggle("presence");
+        }
+
+
+      }
+      else{
+          setMounted(true);
+      }
+
+},[mounted])
 
     return (
         <Container>
@@ -25,9 +50,9 @@ export function Event() {
             </Main>
             <Footer>
                 <Buttons>
-                    <ButtonFavorite><ImgButton src='coracao.png'></ImgButton></ButtonFavorite>
-                    <ButtonCheck>
-                        <CheckboxInput></CheckboxInput>
+                    <ButtonFavorite className='btn-favorite'><ImgButton src='coracao.png'></ImgButton></ButtonFavorite>
+                    <ButtonCheck className='btn-check'>
+                        <ImgButtonCheck src='./laranja.png'></ImgButtonCheck>
                         <TextButtonCheck>Marcar presença</TextButtonCheck>
                     </ButtonCheck>    
                 </Buttons>
