@@ -10,7 +10,7 @@ export function AppRoutes(){
         <Routes>
 
             <Route path='/' element={ <Events /> }/>
-            <Route path='/event' element={ <Event /> }/>
+            <Route path='/event/:date' element={ <Event /> }/>
 
         </Routes>
 

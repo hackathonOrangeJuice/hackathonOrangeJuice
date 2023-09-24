@@ -1,3 +1,4 @@
+import { api } from '../../axios'
 import {
     Container,
     ContainerDate,
@@ -10,12 +11,21 @@ import {
     ButtonRemove,
 } from './style'
 
+import { useNavigate } from "react-router-dom"
+
+
 export function CardEvents({
     date,
-    title,
-    description,
-
+    event,
 }) {
+
+    const navigate = useNavigate();
+
+
+    function handleToGoEvent(date) {
+        navigate(`/event/${date}`)
+    }
+
 
     return (
         <Container>
@@ -23,12 +33,32 @@ export function CardEvents({
                 <Date>Dia {date}</Date>
             </ContainerDate>
             <ContainerEvents>
-                <Title>{ title }</Title>
-                <Description>{ description }</Description>
+                <Title>{event ? event.name : "Sem eventos para esse dia"}</Title>
+                <Description>{event ? event.description : ""}</Description>
 
                 <ContainerButton>
-                    <ButtonDetails>Detalhes</ButtonDetails>
-                    <ButtonRemove><img src='./lixo.png' className='img-button'></img></ButtonRemove>
+                    {
+                        event ?
+                            <ButtonDetails
+                                onClick={() => handleToGoEvent(date)}
+                            >Detalhes</ButtonDetails>
+
+                            : ""
+
+                    }
+                    {
+                        event ?
+                            <ButtonRemove><img src='./lixo.png' className='img-button'></img></ButtonRemove>
+                            : ""
+                    }
+
+                    {
+                        !event ?
+                            <ButtonRemove>adicionar evento<img src='./lixo.png' className='img-button'></img></ButtonRemove>
+                            : ""
+                    }
+
+
                 </ContainerButton>
 
             </ContainerEvents>

@@ -56,6 +56,8 @@ height: 2rem;
 border-radius: 10px;
 border: 1px solid black;
 margin-top: .5rem;
+
+padding: .5rem;
 `
 export const InputDescription = styled.input`
 
@@ -64,6 +66,8 @@ height: 6rem;
 border-radius: 10px;
 border: 1px solid black;
 margin-top: .5rem;
+padding: .5rem;
+
 
 `
 export const ContainerButton = styled.div`

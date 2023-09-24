@@ -37,12 +37,15 @@ export function Events() {
         const month = new Date().getMonth();
 
         const allDays = getDaysInMonth(year, month);
+
+        console.log("eu sou o all days => ", allDays)
         setDays(allDays)
 
     };
 
     async function fetchEvents() {
         const response = await api.get("/events");
+        console.log(response.data)
 
         setEvents(response.data);
 
@@ -57,10 +60,8 @@ export function Events() {
     return (
         <Container>
             <Menu />
-            <RegisterEvent className="RegisterEvent hide"></RegisterEvent>
+            <RegisterEvent className=""></RegisterEvent>
             <ContainerEvents>
-
-                <ButtonAddEvent><img src="icon-plus.png" className="image-button"></img> Adicionar Evento</ButtonAddEvent>
 
                 {
                     days.map((date, index) => {
@@ -68,7 +69,7 @@ export function Events() {
                             const dateFormatted = format(date, "dd 'de' MMMM 'de' yyyy", { locale: ptBR });
 
 
-                            const [filter] = events.filter(event => event.date === dateFormatted);
+                            const [dayWithEvent] = events.filter(event => event.date === dateFormatted);
 
                             return (
 
@@ -76,8 +77,8 @@ export function Events() {
                                 <CardEvents
                                     key={index}
                                     date={String(dateFormatted)}
-                                    title={filter ? filter.name : "Sem eventos para esse dia"}
-                                    description={filter ? filter.description : ""}
+                                    event={dayWithEvent}
+
                                 />
                             );
                         } catch (error) {

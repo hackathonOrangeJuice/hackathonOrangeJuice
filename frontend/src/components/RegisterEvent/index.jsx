@@ -14,45 +14,140 @@ import {
 
 } from './style'
 
+import { Controller, useForm } from "react-hook-form"
+
 export function RegisterEvent() {
+    const { control, handleSubmit } = useForm()
+
+    async function handleRegisterNewEvent({name,description,modality}) {
+
+        console.log(name,description,modality)
+        try {
+            await api.post("/events", {
+                name,
+                description,
+                modality,
+                date
+
+            });
+
+
+        } catch (error) {
+            alert("não foi possivel registrar um evento")
+        }
+    }
     return (
-        <Container>
-              <IconClose
-                    src='./public/x-solid.svg'
-                />
-         
+        <Container className='RegisterEvent hideA'>
+            <IconClose
+                src='./public/x-solid.svg'
+            />
+
             <Text>Olá, admin! Que ótimo ter você por aqui</Text>
             <Title>CADASTRE UM EVENTO</Title>
 
             <BoxInput>
                 <ContainerInput>
                     <Text>Nome do evento</Text>
-                    <Input />
+
+                    <Controller
+
+                        name="name"
+                        control={control}
+
+                        render={({ field: { onChange, value } }) => (
+
+                            <Input
+                                onChange={onChange}
+                                value={value}
+                            />
+                        )}
+
+                    />
+
                 </ContainerInput>
                 <ContainerInput>
-                    <Text>Nome do evento</Text>
-                    <Input />
+                    <Text>descrição</Text>
+
+                    <Controller
+
+                        name="descriptionA"
+                        control={control}
+
+                        render={({ field: { onChange, value } }) => (
+
+                            <Input
+                                onChange={onChange}
+                                value={value}
+                            />
+                        )}
+
+                    />
                 </ContainerInput>
             </BoxInput>
 
             <BoxInput>
                 <ContainerInput>
-                    <Text>Nome do evento</Text>
-                    <Input />
+                    <Text>Modalidade</Text>
+
+                    <Controller
+
+                        name="modality"
+                        control={control}
+
+                        render={({ field: { onChange, value } }) => (
+
+                            <Input
+                                onChange={onChange}
+                                value={value}
+                            />
+                        )}
+
+                    />
                 </ContainerInput>
                 <ContainerInput>
-                    <Text>Nome do evento</Text>
-                    <Input />
+                    <Text>PreÇo</Text>
+
+                    <Controller
+
+                        name="price"
+                        control={control}
+
+                        render={({ field: { onChange, value } }) => (
+
+                            <Input
+                                onChange={onChange}
+                                value={value}
+                            />
+                        )}
+
+                    />
                 </ContainerInput>
             </BoxInput>
 
             <ContainerInput>
                 <Text>Descrição do evento</Text>
-                <InputDescription />
+
+                <Controller
+
+                    name="description"
+                    control={control}
+
+                    render={({ field: { onChange, value } }) => (
+
+                        <InputDescription
+                            onChange={onChange}
+                            value={value}
+                        />
+                    )}
+
+                />
+
             </ContainerInput>
 
             <ContainerButton>
-                <Button>Cadastrar</Button>
+                <Button
+                    onClick={handleSubmit(handleRegisterNewEvent)}
+                >Cadastrar</Button>
                 <Button>Voltar</Button>
             </ContainerButton>
 
