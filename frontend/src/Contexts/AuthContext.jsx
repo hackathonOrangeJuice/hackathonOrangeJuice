@@ -65,11 +65,15 @@ function AuthContextProvider({ children }) {
 
     useEffect(() => {
         const user = getItemLocalStorage();
-        signln("offakihito2.02gmail.com","admin1234")
+
+        signln(user.email, user.password)
     }, [])
 
     return (
-        <AuthContext.Provider value={user}>
+        <AuthContext.Provider value={{
+            user,
+            setUser,
+        }}>
             {children}
         </AuthContext.Provider>
     )
