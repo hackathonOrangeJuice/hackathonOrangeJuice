@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
     Container,
     ContainerEvents,
@@ -7,11 +8,8 @@ import { eachDayOfInterval, startOfMonth, endOfMonth } from 'date-fns';
 import { format, subMonths, addMonths } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 
-
-
 import { Menu } from "../../components/Menu"
 import { CardEvents } from "../../components/CardEvents"
-import { useEffect, useState } from "react";
 
 export function Events() {
 
@@ -34,10 +32,10 @@ export function Events() {
         setDays(allDays)
     }
 
-
     useEffect(() => {
         setCurrentDate();
     }, [monthSelected])
+
     return (
         <Container>
             <Menu />
@@ -58,11 +56,10 @@ export function Events() {
                         )
 
                     })
-
                 }
 
             </ContainerEvents>
 
         </Container>
     )
-}
+};

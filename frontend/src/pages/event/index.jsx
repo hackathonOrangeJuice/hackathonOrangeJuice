@@ -33,6 +33,8 @@ export function Event() {
                     <img src='insta.png' className='insta'></img>
                 </div>
             </footer>
+
+
         </Container>
     )
 
