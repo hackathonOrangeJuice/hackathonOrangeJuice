@@ -16,7 +16,7 @@ export function Menu() {
 
             <ContainerInfoMenu>
                 <LogoImage
-                    src='../../../public/logo.png'
+                    src='./logo.png'
                     alt='logo da orange juice'
                 />
                 <TextFiler>Filtros</TextFiler>

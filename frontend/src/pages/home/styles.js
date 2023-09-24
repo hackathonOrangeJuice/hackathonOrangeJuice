@@ -248,4 +248,42 @@ export const Container = styled.div`
         margin-top: 7.5rem;
     }
 
+    @media screen and (max-width: 800px) {
+
+        header {
+            padding: 1rem;
+        }
+
+        .Enter p {
+            font-size: .8rem;
+        }
+
+        .Enter button {
+            font-size: .8rem;
+        }
+
+        main {
+            margin-top: 5rem;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        main h1 {
+            font-size: 2.5rem;
+        }
+
+        main p {
+            margin: 1rem auto;
+            font-size: 1rem;
+            width: 25rem;
+            text-shadow: 2px 2px black;
+        }
+
+        main button {
+            margin: 0 auto;
+            border: .05rem solid black;
+        }
+
+    }
+
 `;
