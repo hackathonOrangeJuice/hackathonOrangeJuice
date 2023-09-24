@@ -4,12 +4,17 @@ import {
     ContainerEvents,
 } from "./style"
 
+
+
+import { api } from "../../axios";
 import { eachDayOfInterval, startOfMonth, endOfMonth } from 'date-fns';
 import { format, subMonths, addMonths } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 
 import { Menu } from "../../components/Menu"
 import { CardEvents } from "../../components/CardEvents"
+import { AppError } from "../../utils/AppError";
+import { useAuth } from "../../Contexts/AuthContext";
 
 export function Events() {
 
@@ -30,7 +35,8 @@ export function Events() {
 
         const allDays = getDaysInMonth(year, month);
         setDays(allDays)
-    }
+    };
+
 
     useEffect(() => {
         setCurrentDate();
