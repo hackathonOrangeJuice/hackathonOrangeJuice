@@ -17,7 +17,7 @@ export function Home() {
         </div>
       </header>
       <main>
-        <h1>Orange Juice</h1>monstro
+        <h1>Orange Juice</h1>
         <h1><span>Hackathon</span></h1>
         <p>Esse é um projeto desenvolvido em react e node.js para organizar eventos 
           em calendário e marcar presença nos principais e diversos eventos do ano!</p>
