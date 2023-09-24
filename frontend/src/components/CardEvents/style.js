@@ -21,9 +21,19 @@ export const ContainerDate = styled.div`
 
     display: flex;
     align-items: center;
-    padding: 7px;
+    padding: 1rem 1rem;
+
+    font-size: 20px;
 
     border-radius: 10px;
+
+    @media screen and (max-width: 800px) {
+        
+        width: 90%;
+
+        padding: .6rem;
+        
+    }
 `
 
 export const ContainerEvents = styled.div`
@@ -41,20 +51,38 @@ export const ContainerEvents = styled.div`
 
     border-radius: 10px;
 
+    @media screen and (max-width: 800px) {
+        
+        width: 90%;
+        
+    }
+
 
 `
 
 export const Date = styled.h1`
 
 font-size: 1.4rem;
+font-weight: 400;
 color: white;
+@media screen and (max-width: 800px) {
+    font-size: 1rem;
+}
 `
 export const Title = styled.h1`
 font-size: 1.2rem;
+
+@media screen and (max-width: 800px) {
+    font-size: 1rem;
+}
 `
 export const Description = styled.p`
 font-size: 1rem;
 font-weight: 500;
+
+@media screen and (max-width: 800px) {
+    font-size: .8rem;
+}
 `
 
 export const ContainerButton = styled.div`
@@ -62,6 +90,10 @@ export const ContainerButton = styled.div`
 width: 50%;
 display: flex;
 gap: 10px;
+
+@media screen and (max-width: 800px) {
+    width: 80%;
+}
 `
 export const ButtonDetails = styled.button`
 font-weight: bold;
@@ -75,7 +107,9 @@ border: none;
 
 cursor: pointer;
 
-
+@media screen and (max-width: 800px) {
+    font-size: .6rem;
+}
 
 `
 export const ButtonPresence = styled.button`
@@ -89,4 +123,9 @@ border-radius: 10px;
 border: none;
 
 cursor: pointer;
+
+@media screen and (max-width: 800px) {
+    font-size: .6rem;
+}
+
 `

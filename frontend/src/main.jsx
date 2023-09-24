@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Home } from './pages/home/home';
+import { AuthContextProvider } from './Contexts/AuthContext';
+import { Home } from './pages/home';
 import { Events } from "./pages/Events";
-import GlobalStyle  from './styles/global';
+import { Event } from './pages/event/';
+import GlobalStyle from './styles/global';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <GlobalStyle />
-    <Events />
-  </React.StrictMode>,
+    <Event />
+  </React.StrictMode>
 )

@@ -19,7 +19,7 @@ export function Home() {
       <main>
         <h1>Orange Juice</h1>
         <h1><span>Hackathon</span></h1>
-        <p>Esse é um projeto desenvolvido em react e node.js para organizar eventos 
+        <p>Esse é um projeto desenvolvido em react e node.js para organizar eventos
           em calendário e marcar presença nos principais e diversos eventos do ano!</p>
         <button>Comece aqui <img src='./seta.png'></img></button>
       </main>
@@ -79,7 +79,7 @@ export function Home() {
           <div className='Networks-Register'>
             <img src='./linkedin.png'></img>
             <img className='insta' src='./insta.png'></img>
-        </div>
+          </div>
         </div>
       </div>
     </Container>

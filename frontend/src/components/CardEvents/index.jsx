@@ -11,6 +11,7 @@ import {
 } from './style'
 
 export function CardEvents({
+    date,
     title,
     description,
 
@@ -19,7 +20,7 @@ export function CardEvents({
     return (
         <Container>
             <ContainerDate>
-                <Date>18 de Agosto de 2023</Date>
+                <Date>Dia {date}</Date>
             </ContainerDate>
             <ContainerEvents>
                 <Title>{ title }</Title>

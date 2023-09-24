@@ -1,41 +1,71 @@
+import { useEffect, useState } from "react";
 import {
     Container,
     ContainerEvents,
-
-
 } from "./style"
+
+
+
+import { api } from "../../axios";
+import { eachDayOfInterval, startOfMonth, endOfMonth } from 'date-fns';
+import { format, subMonths, addMonths } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
 
 import { Menu } from "../../components/Menu"
 import { CardEvents } from "../../components/CardEvents"
+import { AppError } from "../../utils/AppError";
+import { useAuth } from "../../Contexts/AuthContext";
 
 export function Events() {
+
+    const [days, setDays] = useState([]);
+    const [monthSelected, setMonthSelected] = useState(new Date().getMonth());
+
+    const getDaysInMonth = (year, month) => {
+        const startDate = startOfMonth(new Date(year, month, 1));
+        const endDate = endOfMonth(new Date(year, month, 1));
+        const daysOfMonth = eachDayOfInterval({ start: startDate, end: endDate });
+        return daysOfMonth;
+    };
+
+    function setCurrentDate() {
+
+        const year = new Date().getFullYear();
+        const month = new Date().getMonth();
+
+        const allDays = getDaysInMonth(year, month);
+        setDays(allDays)
+    };
+
+
+    useEffect(() => {
+        setCurrentDate();
+    }, [monthSelected])
+
     return (
         <Container>
             <Menu />
-
             <ContainerEvents>
-                <CardEvents
-                    title="Encontro com o Neymar"
-                    description="Neymar nosso monstro"
-                />
-                <CardEvents
-                    title="Encontro com o Cristiano Ronaldo"
-                    description="Cristiano Ronaldo é o milior"
-                />
-                <CardEvents
-                    title="Encontro com o Messi"
-                    description="Ankara Messi, Ankara Messi, Ankara Messi"
-                />
-                  <CardEvents
-                    title="Encontro com o Vinicius Júnior"
-                    description="Vinicius Júnior a taça não merece tirar o seu batom"
-                />
-                  <CardEvents
-                    title="Encontro com o Haaland"
-                    description="Haaland Haaland, o menino é um titã"
-                />
+
+                {
+                    days.map((date, index) => {
+
+                        const dateFormatted = format(date, "dd 'de' MMMM 'de' yyyy", { locale: ptBR });
+
+                        return (
+                            <CardEvents
+                                key={index}
+                                date={String(dateFormatted)}
+                                title="Encontro com o Neymar"
+                                description="Neymar nosso monstro"
+                            />
+                        )
+
+                    })
+                }
+
             </ContainerEvents>
 
         </Container>
     )
-}
+};
