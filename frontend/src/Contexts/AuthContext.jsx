@@ -22,7 +22,10 @@ function AuthContextProvider({ children }) {
     function getItemLocalStorage() {
         const user = localStorage.getItem(infoLoginLocalStorage);
 
-        const userParseJson = user ? JSON.parse(user) : ""
+        const userParseJson = user ? JSON.parse(user) : {
+            email: "",
+            password: ""
+        }
 
         console.log("eu sou o user => ", userParseJson)
 

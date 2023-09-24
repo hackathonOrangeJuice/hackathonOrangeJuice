@@ -19,6 +19,7 @@ import { useAuth } from "../../Contexts/AuthContext";
 export function Events() {
 
     const [days, setDays] = useState([]);
+    const [events, setEvents] = useState([]);
     const [monthSelected, setMonthSelected] = useState(new Date().getMonth());
 
     const getDaysInMonth = (year, month) => {
@@ -27,7 +28,7 @@ export function Events() {
         const daysOfMonth = eachDayOfInterval({ start: startDate, end: endDate });
         return daysOfMonth;
     };
-
+    
     function setCurrentDate() {
 
         const year = new Date().getFullYear();
@@ -35,11 +36,20 @@ export function Events() {
 
         const allDays = getDaysInMonth(year, month);
         setDays(allDays)
+
     };
+
+    async function fetchEvents() {
+        const response = await api.get("/events");
+
+        setEvents(response.data);
+
+    }
 
 
     useEffect(() => {
         setCurrentDate();
+        fetchEvents();
     }, [monthSelected])
 
     return (
@@ -49,19 +59,27 @@ export function Events() {
 
                 {
                     days.map((date, index) => {
+                        try {
+                            const dateFormatted = format(date, "dd 'de' MMMM 'de' yyyy", { locale: ptBR });
 
-                        const dateFormatted = format(date, "dd 'de' MMMM 'de' yyyy", { locale: ptBR });
 
-                        return (
-                            <CardEvents
-                                key={index}
-                                date={String(dateFormatted)}
-                                title="Encontro com o Neymar"
-                                description="Neymar nosso monstro"
-                            />
-                        )
+                            const [filter] = events.filter(event => event.date === dateFormatted);
 
+                            return (
+
+
+                                <CardEvents
+                                    key={index}
+                                    date={String(dateFormatted)}
+                                    title={filter ? filter.name : "Sem eventos para esse dia"}
+                                    description={filter ? filter.description : ""}
+                                />
+                            );
+                        } catch (error) {
+                            console.error(error);
+                        }
                     })
+
                 }
 
             </ContainerEvents>
