@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { AuthContextProvider } from './Contexts/AuthContext';
-import { Home } from "./pages/Home/index"
+import { Home } from "./pages/home/index"
 import { Routes } from './routes';
 
 import GlobalStyle from './styles/global';

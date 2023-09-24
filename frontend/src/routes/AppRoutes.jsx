@@ -1,7 +1,7 @@
 import { Routes, Route} from 'react-router-dom';
 
 import { Events } from '../pages/Events';
-import { Event } from '../pages/Event';
+import { Event } from '../pages/event';
 
 
 export function AppRoutes(){
