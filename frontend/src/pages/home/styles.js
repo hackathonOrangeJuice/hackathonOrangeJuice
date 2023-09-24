@@ -15,343 +15,170 @@ export const Container = styled.div`
         display: none;
     }
 
-    header {
-        padding: 2rem 11rem 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+`;
 
-    .Logo-Menu {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-    }
+export const Header = styled.div`
 
-    .Logo-Menu img {
-        width: 2rem;
-        cursor: pointer;
-    }
-
-    #logo {
-        width: 3rem;
-    }
-
-    .Enter {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    .Enter p {
-        color: white;
-        font-weight: 700;
-        cursor: pointer;
-        font-size: 1rem;
-    }
-
-    .Enter button {
-        font-family: "Raleway";
-        color: white;
-        font-weight: 700;
-        font-size: 1rem;
-        background-color: #ff9900;
-        border: none;
-        padding: .4rem 1.5rem;
-        border-radius: 2.5rem;
-        cursor: pointer;
-    }
-
-    main {
-        padding: 10rem 11rem;
-    }
-
-    main h1 {
-        text-transform: uppercase;
-        color: white;
-        letter-spacing: .1rem;
-        font-size: 3.8rem;
-        text-shadow: 0 0 1rem gray;
-    }
-
-    main span {
-        color: #ff9900;
-    }
-
-    main p {
-        margin-top: 1.5rem;
-        font-size: 1.3rem;
-        color: white;
-        font-weight: bold;
-        text-transform: uppercase;
-        width: 29rem;
-    }
-
-    main button {
-        display: flex;
-        align-items: center;
-        gap: .3rem;
-        margin-top: 1rem;
-        background-color: #ff9900;
-        font-size: 1.1rem;
-        font-family: "Raleway";
-        font-weight: 700;
-        color: white;
-        padding: .6rem;
-        border-radius: 1rem;
-        border: none;
-        cursor: pointer;
-    }
-
-    .Div-Login {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 30rem;
-        height: 100vh;
-        background-color: white;
-        padding: 2rem 4rem;
-    }
-
-    .Menu-Login, .Menu-Register {
-        text-align: right;
-    }
-
-    .Menu-Login img, .Menu-Register img {
-        width: 1.6rem;
-        cursor: pointer;
-    }
-
-    .Login {
-        margin-top: 5rem;
-        text-align: center;
-    }
-
-    .Login h2, .Register h2 {
-        text-transform: uppercase;
-        color: #ff9900;
-        font-weight: 700;
-        font-size: 2.8rem;
-    }
-
-    .Login p  {
-        font-size: 1.3rem;
-        font-weight: 400;
-    }
-
-    .Login-Inputs {
-        margin-top: 3rem;
-    }
-
-    .Login-Inputs p {
-        text-align: left;
-        margin-left: 3.5rem;
-        margin-bottom: .7rem;
-    }
-
-    #password {
-        margin-top: 1.5rem;
-    }
-
-    .Login-Inputs input, .Register-Inputs input {
-        font-family: "Raleway";
-        padding: .5rem .8rem;
-        width: 15rem;
-        border-radius: .5rem;
-        border: .05rem solid black;
-    }
-
-    .Login-Inputs .Register-Text, .Register .Login-Text {
-        margin-top: .5rem;
-        margin-left: 4.4rem;
-        font-size: .8rem;
-    }
-
-    .Login-Inputs span, .Register span {
-        font-weight: 700;
-        cursor: pointer;
-    }
-
-    .Login-Inputs button, .Register-Buttons button {
-        margin-top: .5rem;
-        width: 15rem;
-        border-radius: .5rem;
-        border: .05rem solid black;
-        padding: .5rem;
-        background-color: #ff9900;
-        font-family: "Raleway";
-        font-weight: 700;
-        color: white;
-        font-size: 1.2rem;
-        cursor: pointer;
-    }
-
-    .Networks-Login {
-        margin-top: 7rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .Networks-Login img, .Networks-Register img {
-        width: 2.5rem;
-        cursor: pointer;
-    }
-
-    .Networks-Login .insta, .Networks-Register .insta {
-        width: 2.7rem;
-    }
-
-    .Div-Register {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 45rem;
-        height: 100vh;
-        background-color: white;
-        padding: 2rem 4rem;
-    }
-
-    .Register {
-        margin-top: 5rem;
-    }
-
-    .Register p {
-        font-size: 1.2rem;
-        width: 23rem;
-    }
-
-    .Register-Inputs {
-        margin-top: 1.5rem;
-        display: flex;
-        align-items: center;
-        gap: 3rem;
-    }
-
-    .Register-Inputs p {
-        width: 15rem;
-        margin-bottom: .7rem;
-    }
-
-    .Register .Login-Text {
-        margin-left: 0;
-    }
-
-    .Register-Buttons {
-        margin-top: 1rem;
-        display: flex;
-        align-items: center;
-        gap: 3rem;
-    }
-
-    .Networks-Register {
-        margin-top: 7.5rem;
-    }
+    padding: 2rem 11rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
 
     @media screen and (max-width: 800px) {
 
-        header {
-            padding: 1rem;
-        }
-
-        .Enter p {
-            font-size: .8rem;
-        }
-
-        .Enter button {
-            font-size: .8rem;
-        }
-
-        main {
-            margin-top: 5rem;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        main h1 {
-            font-size: 2.5rem;
-        }
-
-        main p {
-            margin: 1rem auto;
-            font-size: 1rem;
-            width: 25rem;
-            text-shadow: 2px 2px black;
-        }
-
-        main button {
-            margin: 0 auto;
-            border: .05rem solid black;
-        }
-
-        .Div-Login {
-            width: 100%;
-        }
-
-        .Login h2, .Register h2 {
-            font-size: 2rem;
-        }
-
-        .Login p {
-            font-size: 1rem;
-        }
-
-        .Login-Inputs p {
-            font-size: 1rem;
-            margin-left: 4.3rem;
-        }
-
-        .Login-Inputs input, .Register-Inputs input {
-            padding: .3rem .5rem;
-        }
-
-        .Login-Inputs .Register-Text, .Register .Login-Text {
-            font-size: .6rem;
-        }
-
-        .Login-Inputs button, .Register-Buttons button {
-            padding: .3rem;
-        }
-
-        .Menu-Login img, .Menu-Register img {
-            width: 1.2rem;
-            cursor: pointer;
-        }
-
-        .Div-Register {
-            padding: 1rem;
-            width: 100%;
-        }
-
-        .Register p {
-            font-size: 1rem;
-        }
-
-        .Register-Inputs p {
-            width: 12rem;
-        }
-
-        .Register-Inputs input {
-            width: 12rem;
-        }
-
-        .Register-Inputs {
-            gap: 1rem;
-        }
-
-        .Register-Buttons {
-            gap: 1rem;
-        }
-
-        .Register-Buttons button {
-            width: 12rem;
-        }
-
-        .Networks-Register {
-            display: flex;
-            align-items: center;
-        }
+        padding: 1rem;
 
     }
+
+`;
+
+export const MenuLogo = styled.div`
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+
+`;
+
+export const ImageMenu = styled.img`
+
+    width: 2rem;
+    cursor: pointer;
+
+`;
+
+export const ImageLogo = styled.img`
+
+    width: 3rem;
+    cursor: pointer;
+
+`
+
+export const Enter = styled.div`
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+`;
+
+export const BtnRegister = styled.p`
+
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+
+
+    @media screen and (max-width: 800px) {
+        font-size: .8rem;
+    }
+
+
+`;
+
+export const BtnLogin = styled.button`
+
+    font-family: "Raleway";
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    background-color: #ff9900;
+    border: none;
+    padding: .4rem 1.5rem;
+    border-radius: 2.5rem;
+    cursor: pointer;
+
+    @media screen and (max-width: 800px) {
+        font-size: .8rem;
+    }
+
+`;
+
+export const Main = styled.div`
+
+    padding: 10rem 11rem;
+
+    @media screen and (max-width: 800px) {
+        
+        margin-top: 5rem;
+        padding: 1rem;
+        text-align: center;
+
+    }
+
+`;
+
+export const TitlePage = styled.h1`
+
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: .1rem;
+    font-size: 3.8rem;
+    text-shadow: 0 0 1rem gray;
+
+    @media screen and (max-width: 800px) {
+
+        font-size: 2.5rem;
+
+    }
+
+`;
+
+export const Span = styled.span`
+
+    color: #ff9900;
+
+`;
+
+export const Text = styled.p`
+
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 29rem;
+
+    @media screen and (max-width: 800px) {
+
+        margin: 1rem auto;
+        font-size: 1rem;
+        width: 25rem;
+        text-shadow: 2px 2px black;
+
+    }
+
+`;
+
+export const Button = styled.button`
+
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    margin-top: 1rem;
+    background-color: #ff9900;
+    font-size: 1.1rem;
+    font-family: "Raleway";
+    font-weight: 700;
+    color: white;
+    padding: .6rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+
+    @media screen and (max-width: 800px) {
+
+        margin: 0 auto;
+        border: .05rem solid black;
+
+    }
+
+`;
+
+export const ImgButton = styled.img`
+
+
 
 `;
