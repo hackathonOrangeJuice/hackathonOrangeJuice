@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from 'react'
 import { Container, Header, MenuLogo, ImageMenu, ImageLogo, Enter, BtnRegister, BtnLogin, Main, TitlePage, Span, Text, Button, ImgButton } from './styles'
 import { ScreenLogin } from '../../components/Login';
-import { Register } from '../../components/Register';
+import { ScreenRegister } from '../../components/Register';
 
 export function Home() {
 
@@ -107,7 +107,7 @@ export function Home() {
         <Button className='btn-start'>Comece aqui <ImgButton src='./seta.png'></ImgButton></Button>
       </Main>
       <ScreenLogin></ScreenLogin>
-      <Register></Register>
+      <ScreenRegister></ScreenRegister>
     </Container>
   )
 }

@@ -2,36 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 
-    @media screen and (max-width: 800px) {
-
-        .Div-Login {
-        }
-
-        .Login h2 {
-        }
-
-        .Login p {
-        }
-
-        .Login-Inputs p {
-           
-        }
-
-        .Login-Inputs input {
-        }
-
-        .Login-Inputs .Register-Text {
-        }
-
-        .Login-Inputs button {
-        }
-
-        .Menu-Login img {
-        }
-
-
-    }
-
 `;
 
 export const DivLogin = styled.div`

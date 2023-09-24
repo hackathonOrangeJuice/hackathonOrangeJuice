@@ -1,48 +1,49 @@
 import { React } from 'react';
-import { Container } from './styles';
+import { Container, DivRegister, MenuRegister, ImgClose, Register, TitleRegister, SubtitleRegister, RegisterInputs, Name, TextInput,
+Email, Input, Password, PasswordInput, LoginText, SpanLoginText, RegisterButtons, BtnDivRegister, NetworksRegister, ImgNetworks } from './styles';
 
-export function Register() {
+export function ScreenRegister() {
 
     return (
         <Container>
-        <div className='Div-Register hide'>
-            <div className='Menu-Register'>
-            <img src='x.png' className='close-register'></img>
-            </div>
-            <div className='Register'>
-            <h2>Cadastre-se</h2>
-            <p>Bem vindo a nossa plataforma de eventos! Vamos começar!</p>
-            <div className='Register-Inputs'>
-                <div className='Name'>
-                <p>Nome</p>
-                <input type='text'></input>
-                </div>
-                <div className='Email'>
-                <p>E-mail</p>
-                <input type='text'></input>
-                </div>
-            </div>
-            <div className='Register-Inputs'>
-                <div className='Password'>
-                <p>Senha</p>
-                <input type='password'></input>
-                </div>
-                <div className='Password'>
-                <p>Senha Novamente</p>
-                <input type='password'></input>
-                </div>
-            </div>
-            <p className='Login-Text'>Já possui uma conta? <span className='login-text'>Faça login</span></p>
-            <div className='Register-Buttons'>
-                <button>Cadastrar</button>
-                <button className='btn-back'>Voltar</button>
-            </div>
-            <div className='Networks-Register'>
-                <img src='./linkedin.svg'></img>
-                <img className='insta' src='./instagram.svg'></img>
-            </div>
-            </div>
-        </div>
+        <DivRegister className='Div-Register hide'>
+            <MenuRegister>
+            <ImgClose src='x.png' className='close-register'></ImgClose>
+            </MenuRegister>
+            <Register>
+            <TitleRegister>Cadastre-se</TitleRegister>
+            <SubtitleRegister>Bem vindo a nossa plataforma de eventos! Vamos começar!</SubtitleRegister>
+            <RegisterInputs>
+                <Name>
+                <TextInput>Nome</TextInput>
+                <Input></Input>
+                </Name>
+                <Email>
+                <TextInput>E-mail</TextInput>
+                <Input></Input>
+                </Email>
+            </RegisterInputs>
+            <RegisterInputs>
+                <Password>
+                <TextInput>Senha</TextInput>
+                <PasswordInput></PasswordInput>
+                </Password>
+                <Password>
+                <TextInput>Senha Novamente</TextInput>
+                <PasswordInput></PasswordInput>
+                </Password>
+            </RegisterInputs>
+            <LoginText>Já possui uma conta? <SpanLoginText className='login-text'>Faça login</SpanLoginText></LoginText>
+            <RegisterButtons>
+                <BtnDivRegister>Cadastrar</BtnDivRegister>
+                <BtnDivRegister className='btn-back'>Voltar</BtnDivRegister>
+            </RegisterButtons>
+            <NetworksRegister>
+                <ImgNetworks src='./linkedin.svg'></ImgNetworks>
+                <ImgNetworks className='insta' src='./instagram.svg'></ImgNetworks>
+            </NetworksRegister>
+            </Register>
+        </DivRegister>
         </Container>
     )
 }
