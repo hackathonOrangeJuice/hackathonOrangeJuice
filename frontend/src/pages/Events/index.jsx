@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import {
     Container,
     ContainerEvents,
-    ButtonAddEvent
+    ButtonAddEvent,
+    BtnLogout
 } from "./style"
 
 
@@ -74,9 +75,8 @@ export function Events() {
                 showRegister={showRegister}
                 setShowRegister={setShowRegister}
             />
-
             <ContainerEvents>
-
+            <BtnLogout>Logout</BtnLogout>
                 {
                     days.map((date, index) => {
                         try {

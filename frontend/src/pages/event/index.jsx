@@ -52,7 +52,7 @@ export function Event() {
         <Container>
             <Header>
                 <ImgBack
-                 src='seta-voltar.png'
+                 src='./seta-voltar.png'
                  onClick={handleToGoEvents}></ImgBack>
                 <ImgLogo src='./logo.png'></ImgLogo>
             </Header>
