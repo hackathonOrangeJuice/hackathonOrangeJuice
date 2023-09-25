@@ -13,6 +13,26 @@ display: flex;
     }
 `
 
+
+export const BtnLogout = styled.button`
+
+    padding: .3rem 1rem .3rem .7rem;
+    border-radius: .5rem;
+    background-color: #eb1e1e;
+    border: none;
+    font-family: "Raleway";
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+
+    .logout {
+        width: 1rem;
+    }
+
+`;
+
 export const ButtonAddEvent = styled.button`
     
     display: flex;

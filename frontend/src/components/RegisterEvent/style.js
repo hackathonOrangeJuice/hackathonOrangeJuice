@@ -20,6 +20,10 @@ flex-direction: column;
 
 padding: 2.2rem;
 
+@media screen and (max-width: 800px) {
+    width: 100%;
+}
+
 `
 export const IconClose = styled.img`
 width: 1rem;

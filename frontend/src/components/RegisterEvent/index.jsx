@@ -43,8 +43,8 @@ export function RegisterEvent({ date, showRegister, setShowRegister }) {
             className={showRegister ? "RegisterEvent" : "RegisterEvent hide"}
         >
             <IconClose
-                src='./public/x-solid.svg'
-            />
+                src='./x-solid.svg'
+            alt='fechar'/>
 
             <Text>Olá, admin! Que ótimo ter você por aqui</Text>
             <Title>CADASTRE UM EVENTO</Title>
@@ -70,7 +70,7 @@ export function RegisterEvent({ date, showRegister, setShowRegister }) {
 
                 </ContainerInput>
                 <ContainerInput>
-                    <Text>descrição</Text>
+                    <Text>Descrição</Text>
 
                     <Controller
 
@@ -109,7 +109,7 @@ export function RegisterEvent({ date, showRegister, setShowRegister }) {
                     />
                 </ContainerInput>
                 <ContainerInput>
-                    <Text>PreÇo</Text>
+                    <Text>Preço</Text>
 
                     <Controller
 
@@ -164,11 +164,11 @@ export function RegisterEvent({ date, showRegister, setShowRegister }) {
             <ContainerSocialNetworks>
                 <LogoSocialNetworks
                     src='./public/linkedin.svg'
-                />
+                alt='logo do linkedin'/>
 
                 <LogoSocialNetworks
                     src='./public/instagram.svg'
-                />
+                alt='logo do instagram'/>
             </ContainerSocialNetworks>
 
 

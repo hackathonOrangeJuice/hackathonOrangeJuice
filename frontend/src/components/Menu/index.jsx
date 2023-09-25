@@ -5,8 +5,7 @@ import {
     TextFiler,
     TextMain,
     Text,
-    TextTheme,
-    ContainerSocialNetworks,
+    TextTheme
 
 } from './style'
 
@@ -26,24 +25,13 @@ export function Menu() {
                 <Text>Presencial</Text>
                 <Text>Online</Text>
 
-                <TextTheme>Mês</TextTheme>
+                <TextMain>Entrada</TextMain>
 
-                <Text>Janeiro</Text>
-                <Text>Fevereiro</Text>
-                <Text>Março</Text>
-                <Text>Abril</Text>
-                <Text>Maio</Text>
-                <Text>Junho</Text>
-                <Text>Julho</Text>
-                <Text>Agosto</Text>
-                <Text>Setembro</Text>
-                <Text>Outubro</Text>
-                <Text>Novembro</Text>
-                <Text>Dezembro</Text>
+                <Text>Gratuita</Text>
+                <Text>Paga</Text>
 
             </ContainerInfoMenu>
 
-            <ContainerSocialNetworks />
         </Container>
     )
 }

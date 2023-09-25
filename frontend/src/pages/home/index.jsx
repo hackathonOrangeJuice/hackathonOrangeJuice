@@ -91,8 +91,8 @@ export function Home() {
     <Container>
       <Header>
         <MenuLogo>
-          <ImageMenu src='./menu.png'></ImageMenu>
-          <ImageLogo src='./logo.png'></ImageLogo>
+          <ImageMenu src='./menu.png' alt='símbolo com três traços brancos indicando "menu"'></ImageMenu>
+          <ImageLogo src='./logo.png' alt='logotipo da Orange Juice'></ImageLogo>
         </MenuLogo>
         <Enter>
           <BtnRegister className='btn-register'>Inscreva-se</BtnRegister>
@@ -104,7 +104,7 @@ export function Home() {
         <TitlePage><Span>Hackathon</Span></TitlePage>
         <Text>Esse é um projeto desenvolvido em react e node.js para organizar eventos 
           em calendário e marcar presença nos principais e diversos eventos do ano!</Text>
-        <Button className='btn-start'>Comece aqui <ImgButton src='./seta.png'></ImgButton></Button>
+        <Button className='btn-start'>Comece aqui <ImgButton src='./seta.png' alt='seta branca para a direita, indicando "avanço"'></ImgButton></Button>
       </Main>
       <ScreenLogin></ScreenLogin>
       <ScreenRegister></ScreenRegister>
