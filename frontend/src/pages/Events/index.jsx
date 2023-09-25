@@ -76,7 +76,7 @@ export function Events() {
                 setShowRegister={setShowRegister}
             />
             <ContainerEvents>
-            <BtnLogout>Logout</BtnLogout>
+            <BtnLogout><img src="./desligar.png" className="logout"></img>Logout</BtnLogout>
                 {
                     days.map((date, index) => {
                         try {

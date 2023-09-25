@@ -34,10 +34,13 @@ padding: 1rem;
 
 
 export const TextFiler = styled.h1`
-color: white;
-font-size: 1.2rem;
+color: #ff9900;
+font-size: 1.6rem;
 font-weight: 500;
 margin-bottom: 1rem;
+text-transform: uppercase;
+text-align: center;
+letter-spacing: .2rem;
 
 @media screen and (max-width: 800px) {
     width: 35vw;
@@ -45,6 +48,7 @@ margin-bottom: 1rem;
 }
 `
 export const TextMain = styled.h1`
+margin-top: 1rem;
 color: white;
 font-size: 1.2rem;
 font-weight: 500;
@@ -89,25 +93,11 @@ cursor: pointer;
 
 export const LogoImage = styled.img`
 
-width: 50%;
+width: 35%;
 margin: 0 auto 3rem;
 
 @media screen and (max-width: 800px) {
     width: 70%;
-}
-
-`
-
-export const ContainerSocialNetworks = styled.div`
-
-width: 20vw;
-height: 20vh;
-
-
-border-top: 2px solid gray;
-
-@media screen and (max-width: 800px) {
-    width: 30vw;
 }
 
 `

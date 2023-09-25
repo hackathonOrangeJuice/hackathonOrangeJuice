@@ -43,7 +43,7 @@ export function RegisterEvent({ date, showRegister, setShowRegister }) {
             className={showRegister ? "RegisterEvent" : "RegisterEvent hide"}
         >
             <IconClose
-                src='./public/x-solid.svg'
+                src='./x-solid.svg'
             alt='fechar'/>
 
             <Text>Olá, admin! Que ótimo ter você por aqui</Text>

@@ -69,12 +69,12 @@ export function CardEvents({
 
                     {
                         !event ?
-                            <ButtonRemove
+                            <ButtonDetails
                             onClick={handleShowRegister}
 
                             >
-                                adicionar evento
-                                <img src='./lixo.png' className='img-button' alt='remover'></img></ButtonRemove>
+                                Adicionar Evento
+                                </ButtonDetails>
                             : ""
                     }
 
