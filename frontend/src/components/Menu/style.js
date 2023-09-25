@@ -45,6 +45,7 @@ letter-spacing: .2rem;
 @media screen and (max-width: 800px) {
     width: 35vw;
     font-size: 1rem;
+    text-align: left;
 }
 `
 export const TextMain = styled.h1`

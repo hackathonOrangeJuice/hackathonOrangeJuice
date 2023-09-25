@@ -70,7 +70,7 @@ export function RegisterEvent({ date, showRegister, setShowRegister }) {
 
                 </ContainerInput>
                 <ContainerInput>
-                    <Text>descrição</Text>
+                    <Text>Descrição</Text>
 
                     <Controller
 

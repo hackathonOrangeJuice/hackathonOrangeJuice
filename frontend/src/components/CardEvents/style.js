@@ -114,7 +114,10 @@ cursor: pointer;
 `
 export const ButtonRemove = styled.button`
 background-color: #eb1e1e;
-width: 10%;
+width: 20%;
+display: flex;
+justify-content: center;
+align-items: center;
 
 border-radius: 10px;
 border: none;
@@ -126,7 +129,12 @@ cursor: pointer;
     }
 
 @media screen and (max-width: 800px) {
+    
     font-size: .6rem;
+
+    .img-button {
+        width: .8rem;
+    }
 }
 
 `
