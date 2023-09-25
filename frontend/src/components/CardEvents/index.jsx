@@ -63,12 +63,7 @@ export function CardEvents({
                     }
                     {
                         event ?
-                            <ButtonRemove
-                            onClick={() => {
-                                handleDeleteEvent(date)
-                                reload();
-                            }}
-                            ><img src='./lixo.png' className='img-button'></img></ButtonRemove>
+                            <ButtonRemove><img src='./lixo.png' className='img-button' alt='remover'></img></ButtonRemove>
                             : ""
                     }
 
@@ -79,7 +74,7 @@ export function CardEvents({
 
                             >
                                 adicionar evento
-                                <img src='./lixo.png' className='img-button'></img></ButtonRemove>
+                                <img src='./lixo.png' className='img-button' alt='remover'></img></ButtonRemove>
                             : ""
                     }
 
