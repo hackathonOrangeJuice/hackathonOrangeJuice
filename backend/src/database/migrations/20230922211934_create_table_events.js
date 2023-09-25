@@ -4,6 +4,8 @@ exports.up = knex => knex.schema.createTable("events", table => {
     table.text("description").notNullable();
     table.text("modality").notNullable();
     table.text("date").notNullable();
+    table.text("price").notNullable();
+
     table.timestamp("created_at").default(knex.fn.now());
     table.timestamp("updated_at").default(knex.fn.now());
   });

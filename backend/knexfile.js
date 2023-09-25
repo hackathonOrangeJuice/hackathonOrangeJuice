@@ -2,16 +2,19 @@ const path = require("path");
 
 module.exports = {
   development: {
-    client: "sqlite3",
+    client: "pg", // Usando o cliente para PostgreSQL
     connection: {
-      filename: path.resolve(__dirname, "src", "database", "database.db")
+      host: "containers-us-west-62.railway.app",
+      user: "postgres", // 
+      password: "UdrThz2pytp35l0ecfQq", 
+      database: "railway" ,
+      port : "6182"
     },
     migrations: {
       directory: path.resolve(__dirname, "src", "database", "migrations")
     },
     seeds: {
       directory: path.resolve(__dirname, "src", "database", "seeds")
-    },
-    useNullAsDefault: true
+    }
   }
 };

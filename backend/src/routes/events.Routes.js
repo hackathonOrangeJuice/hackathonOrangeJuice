@@ -6,13 +6,14 @@ const controller = new eventsController();
 
 const routes = Router();
 
-routes.use(ensureAuthentication);
+
 
 routes.get("/", controller.getAllEvents);
 routes.get("/:id", controller.getEventById);
+routes.get("/bydate/:date", controller.getEventByDate);
 routes.post("/", controller.registerEvent);
 routes.put("/", controller.editEvent);
-routes.delete("/:id", controller.deleteEvent)
+routes.delete("/:date", controller.deleteEvent)
 
 
 module.exports = routes;

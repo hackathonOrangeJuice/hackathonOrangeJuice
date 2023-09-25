@@ -38,6 +38,8 @@ class SessionsController {
 
         const { name, email, password } = request.body;
 
+        console.log(name,email,password)
+
         const checkEmailAlreadyExists = await knex("users").where({ email }).first();
 
         if (checkEmailAlreadyExists) throw new AppError("email já em uso", 403);

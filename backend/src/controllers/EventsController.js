@@ -25,6 +25,19 @@ class EventsController {
         response.status(200).json(event)
     };
 
+    //pegar evento por data
+    async getEventByDate(request,response){
+
+        const { date } = request.params;
+
+        const event = await knex("events").where({date}).first();
+
+        console.log(event)
+
+        return response.status(200).json(event)
+
+    }
+
     //cadastrar evento
     async registerEvent(request, response) {
 
@@ -38,6 +51,8 @@ class EventsController {
         const dataNeweEvent = {
             name, description, modality, date
         };
+
+        console.log("eu sou dados da requisiçao", name,description,modality,date)
 
         try {
             await knex("events").insert(dataNeweEvent);
@@ -72,11 +87,11 @@ class EventsController {
 
     //deletar evento
     async deleteEvent(request, response) {
-        const { id } = request.params;
+        const { date } = request.params;
 
         try {
 
-            await knex("events").where({ id }).del()
+            await knex("events").where({ date }).del()
         } catch (error) {
             throw new AppError("Não foi póssivel deletar o evento", 400)
         }
