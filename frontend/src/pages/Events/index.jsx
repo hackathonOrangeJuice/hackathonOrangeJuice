@@ -21,12 +21,13 @@ import { useAuth } from "../../Contexts/AuthContext";
 
 export function Events() {
 
+    const { logout } = useAuth();
     const [days, setDays] = useState([]);
     const [events, setEvents] = useState([]);
     const [monthSelected, setMonthSelected] = useState(new Date().getMonth());
     const [dateSelected, setDateSelected] = useState();
     const [showRegister, setShowRegister] = useState(false)
-    const [reload, setReload ] = useState(false)
+    const [reload, setReload] = useState(false)
 
     const getDaysInMonth = (year, month) => {
         const startDate = startOfMonth(new Date(year, month, 1));
@@ -41,7 +42,7 @@ export function Events() {
         const month = new Date().getMonth();
 
         const allDays = getDaysInMonth(year, month);
-        
+
         setDays(allDays)
 
     };
@@ -52,11 +53,15 @@ export function Events() {
 
         setEvents(response.data);
 
-    }
+    };
 
-    function reloadPage(){
-        if(reload) setReload(false)
+    function reloadPage() {
+        if (reload) setReload(false)
         else setReload(true)
+    };
+
+    function handleLogout() {
+        logout();
     }
 
     useEffect(() => {
@@ -74,7 +79,14 @@ export function Events() {
                 setShowRegister={setShowRegister}
             />
             <ContainerEvents>
-            <BtnLogout><img src="./desligar.png" className="logout"></img>Logout</BtnLogout>
+
+                <BtnLogout
+                    onClick={handleLogout}>
+                    <img src="./desligar.png"
+                        className="logout"
+
+                    >
+                    </img>Logout</BtnLogout>
                 {
                     days.map((date, index) => {
                         try {
@@ -92,7 +104,7 @@ export function Events() {
                                     event={dayWithEvent}
                                     setDataSelected={setDateSelected}
                                     setShowRegister={setShowRegister}
-                                    reload = {reloadPage}
+                                    reload={reloadPage}
 
                                 />
                             );

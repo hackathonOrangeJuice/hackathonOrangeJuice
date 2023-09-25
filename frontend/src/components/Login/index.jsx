@@ -19,10 +19,8 @@ export function ScreenLogin() {
         try {
             const response = await api.post("/sessions/signln", {
                 email: data.email,
-                password : data.password
+                password: data.password
             });
-
-            console.log("cheguei aqui")
 
             setUser(response.data)
         } catch (error) {
@@ -77,12 +75,15 @@ export function ScreenLogin() {
                         />
 
 
-                        <RegisterText>Não possui uma conta? <SpanRegister className="register-text">Cadastre-se</SpanRegister></RegisterText>
+                        <RegisterText>Não possui uma conta?<SpanRegister className="register-text">Cadastre-se</SpanRegister></RegisterText>
                         <ButtonEnter
                             onClick={handleSubmit(handleSignln)}
-                        >Entrar</ButtonEnter>
+                        >
+                            Entrar
+                        </ButtonEnter>
                     </LoginInputs>
                 </Login>
+                
                 <NetworksLogin>
                     <ImgNetworks src='./linkedin.svg' alt="logotipo do linkedin"></ImgNetworks>
                     <ImgNetworks src='./instagram.svg' alt="logotipo do instagram"></ImgNetworks>

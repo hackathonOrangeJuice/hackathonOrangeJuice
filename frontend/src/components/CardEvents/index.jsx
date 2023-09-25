@@ -19,6 +19,7 @@ export function CardEvents({
     event,
     setDataSelected,
     setShowRegister,
+    setReload,
     reload,
 }) {
 
@@ -27,20 +28,21 @@ export function CardEvents({
 
     function handleToGoEvent(date) {
         navigate(`/event/${date}`)
-    }
+    };
 
-    function handleShowRegister(){
+    function handleShowRegister() {
         setDataSelected(date);
         setShowRegister(true);
-    }
+    };
 
-    async function handleDeleteEvent(date){
+    async function handleDeleteEvent(date) {
         try {
             await api.delete(`/events/${date}`)
+
         } catch (error) {
             alert(error)
         }
-    }
+    };
 
     return (
         <Container>
@@ -56,25 +58,32 @@ export function CardEvents({
                         event ?
                             <ButtonDetails
                                 onClick={() => handleToGoEvent(date)}
-                            >Detalhes</ButtonDetails>
+                            >
+                                Detalhes
+                            </ButtonDetails>
 
                             : ""
 
                     }
                     {
                         event ?
-                            <ButtonRemove><img src='./lixo.png' className='img-button' alt='remover'></img></ButtonRemove>
+                            <ButtonRemove
+                                onClick={() => {
+                                    handleDeleteEvent(date);
+
+                                }}
+                            ><img src='./lixo.png' className='img-button' alt='remover'></img></ButtonRemove>
                             : ""
                     }
 
                     {
                         !event ?
                             <ButtonDetails
-                            onClick={handleShowRegister}
+                                onClick={handleShowRegister}
 
                             >
                                 Adicionar Evento
-                                </ButtonDetails>
+                            </ButtonDetails>
                             : ""
                     }
 

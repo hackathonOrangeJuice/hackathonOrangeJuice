@@ -65,6 +65,12 @@ function AuthContextProvider({ children }) {
             throw new AppError("Não foi possivel criar conta", 400)
         }
     };
+    
+    function logout(){
+        setUser();
+        localStorage.removeItem(infoLoginLocalStorage)
+   
+    }
 
     useEffect(() => {
         const user = getItemLocalStorage();
@@ -77,6 +83,7 @@ function AuthContextProvider({ children }) {
             user,
             setUser,
             signup,
+            logout,
         }}>
             {children}
         </AuthContext.Provider>
