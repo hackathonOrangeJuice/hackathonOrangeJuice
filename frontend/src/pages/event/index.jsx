@@ -52,11 +52,7 @@ export function Event() {
         <Container>
             <Header>
                 <ImgBack
-<<<<<<< HEAD
-                 src='./seta-voltar.png'
-=======
                  src='seta-voltar.png' alt='seta branca para esquerda,indicando "voltar"'
->>>>>>> 9d95f9e3c2aa94e9f5f92992d84a9490cf8672e6
                  onClick={handleToGoEvents}></ImgBack>
                 <ImgLogo src='./logo.png' alt='logo da orange juice'></ImgLogo>
             </Header>
