@@ -40,8 +40,7 @@ export function Events() {
         const month = new Date().getMonth();
 
         const allDays = getDaysInMonth(year, month);
-
-        console.log("eu sou o all days => ", allDays)
+        
         setDays(allDays)
 
     };
@@ -58,7 +57,6 @@ export function Events() {
         if(reload) setReload(false)
         else setReload(true)
     }
-
 
     useEffect(() => {
         setCurrentDate();
